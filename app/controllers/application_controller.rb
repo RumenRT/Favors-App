@@ -1,3 +1,3 @@
 class ApplicationController < ActionController::Base
-    has_secure_password
+    before_action :authenticate_user!
 end
