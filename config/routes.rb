@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   
   root 'profiles#show'
   resources :profiles
+  
+
+  
 end

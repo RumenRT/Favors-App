@@ -1,0 +1,28 @@
+<%= form_with(model: @profile, local: true) do |form| %>
+
+    <div class="field">
+        <%= form.label :first_name %>
+        <%= form.text_field :first_name %>
+    </div>
+        <div class="field">
+        <%= form.label :last_name %>
+        <%= form.text_field :last_name %>
+    </div>
+        <div class="field">
+        <%= form.label :age %>
+        <%= form.text_field :age %>
+    </div>
+    <div class="field">
+        <%= form.label :favors_completed %>
+        <%= form.text_field :favors_completed %>
+    </div>
+    <div class="field">
+        <%= form.label :favors_offered %>
+        <%= form.text_field :favors_offered %>
+    </div>
+        <%= form.hidden_field :user_id, value: current_user.id %> 
+
+    <div class="action">
+        <%= form.submit %>
+    </div>
+<% end %>
