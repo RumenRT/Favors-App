@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
-    before_action :authenticate_user!
+    skip_before_action :send_user_to_create_profile_unless_profile_exists, only: [:new, :create]
+
     def index
         @profiles = Profile.all
     end
@@ -14,6 +15,7 @@ class ProfilesController < ApplicationController
 
     def create 
         @profile = Profile.new(profile_params)
+        @profile.user_id = current_user.id
         @profile.save 
         redirect_to profiles_path
         # respond_to do |format|
@@ -41,6 +43,6 @@ class ProfilesController < ApplicationController
     private 
 
     def profile_params
-        params.require(:profile).permit(:first_name, :last_name, :age, :favors_completed, :favors_offered, :user_id)
+        params.require(:profile).permit(:first_name, :last_name, :age, :favors_completed, :favors_offered)
     end 
 end
