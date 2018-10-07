@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
     skip_before_action :send_user_to_create_profile_unless_profile_exists, only: [:new, :create]
 
     def index
-        @profiles = Profile.all
+        @profiles = current_user.profile
     end
 
     def show

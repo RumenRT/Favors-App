@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_05_182309) do
+ActiveRecord::Schema.define(version: 2018_10_07_161747) do
 
   create_table "favors", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category"
     t.integer "user_id"
+    t.string "description"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "ip"
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.string "country"
     t.index ["user_id"], name: "index_favors_on_user_id"
   end
 

@@ -3,13 +3,13 @@ class FavorsController < ApplicationController
     end
 
     def index
-        @favor = Favor.new
-        @completed = params[:completed] == "true"
-        if @completed
-            @favor = Favor.completed
-        else 
-            @favor = Favor.incoplete
-        end 
+        @favors = Favor.all
+        # @completed = params[:completed] == "true"
+        # if @completed
+        #     @favor = Favor.completed
+        # else 
+        #     @favor = Favor.incoplete
+        # end 
 
     end
 
