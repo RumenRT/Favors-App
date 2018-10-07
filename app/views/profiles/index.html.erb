@@ -1,2 +1,10 @@
 <h1>index</h1>
+  <div>
+    <ul class="list-group">
+      <li class="list-group-item"><%= @profiles.first_name %></li>
+      <li class="list-group-item"><%= @profiles.age %></li>
+      <li class="list-group-item"><%= @profiles.favors_completed %></li>
+      <li class="list-group-item"><%= @profiles.favors_offered %></li>
+    </ul>
+  </div>
 <%= link_to 'New Profile', new_profile_path %>
