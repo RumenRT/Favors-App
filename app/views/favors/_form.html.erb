@@ -1,0 +1,14 @@
+<%= form_with(model: @favors, local: true) do |form| %>
+
+    <div class="field">
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+    </div>
+        <div class="field">
+        <%= form.label :body %>
+        <%= form.text_field :body %>
+  
+    <div class="action">
+        <%= form.submit %>
+    </div>
+<% end %>
