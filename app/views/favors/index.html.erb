@@ -1,6 +1,25 @@
-<h1>Favorssssssssssss</h1>
+<h1 align="center">Favors Near You</h1>
 
 
 
 <%= react_component 'Map',
     props: { coordinates: @coordinates} %>
+
+ <body>
+    <header class="navbar navbar-light navbar-fixed-bottom navbar-inverse">
+      <div class="container">
+       
+        <nav>
+          <ul class="nav navbar-nav  bg-light navbar-center">
+            <li><%= link_to "Favors", './favors#index', id: "logo" %>%></li>
+            <li><%= link_to "Home",   './profiles#index' %></li>
+            <li><%= link_to "New Profile",   './profiles#new' %></li>
+            <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log Out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
