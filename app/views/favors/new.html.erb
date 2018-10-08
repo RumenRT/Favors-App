@@ -1,3 +1,17 @@
-<h1>New Favor</h1>
+<h1 style="background-color: teal;"> New Favor</h1>
 <%= render 'form', favor: @favors %>
-<%= link_to 'Back', favors_path %>
+
+
+
+  <footer class="navbar navbar-fixed-bottom navbar-inverse" style="background-color: teal;">
+      <div class="container">
+        <nav>
+          <ul class="nav navbar-nav navbar-center" style="background-color: teal;">
+            <li><%= link_to "Home",   profiles_path %> </li>
+            <li><%= link_to "Map", favors_path, id: "logo" %> </li>
+            <li><%= link_to "New Favor", '.#new', id: "logo" %> </li>
+            <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log Out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
