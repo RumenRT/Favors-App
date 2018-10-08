@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+#link_id {
+  text-decoration: none;
+  color: black;
+}
+
+#link_id:hover {
+  color: white;
+}
+
+/* h2 {
+  font-family: "Garamond"
+} */
