@@ -1,25 +1,20 @@
-<h1 align="center">Favors Near You</h1>
-
-
-
+<h1 font-color="white" align="center" style="background-color: teal;" text-light>Favors Near You</h1>
+<hr>
 <%= react_component 'Map',
     props: { coordinates: @coordinates} %>
 
  <body>
-    <header class="navbar navbar-light navbar-fixed-bottom navbar-inverse">
+    <header class="navbar navbar-dark navbar-fixed-bottom navbar-inverse" style="background-color: teal;">
       <div class="container">
-       
         <nav>
-          <ul class="nav navbar-nav  bg-light navbar-center">
-            <li><%= link_to "Favors", './favors#index', id: "logo" %>%></li>
-            <li><%= link_to "Home",   './profiles#index' %></li>
-            <li><%= link_to "New Profile",   './profiles#new' %></li>
+          <ul class="nav navbar-nav  navbar-center" >
+            <li class="text-light"><%= link_to "Home",   './profiles#index'  %></li>
+            <li><%= link_to "Map", './favors#index', id: "logo" %></li>
             <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log Out</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <div class="container">
-      <%= yield %>
     </div>
   </body>

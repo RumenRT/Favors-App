@@ -6,3 +6,7 @@
   border-radius: 50%;
   cursor: pointer;
 }
+.navbar-inverse .navbar-nav>li>a {
+  color: white;}
+h1 {
+  color: white;}
