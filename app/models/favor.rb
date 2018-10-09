@@ -6,11 +6,12 @@ class Favor < ApplicationRecord
         companionship: 2 
     }
     belongs_to :user
-    geocoded_by :address
-    after_validation :geocode
 
     def address 
         [street, city, state, country].compact.join(', ')
     end
+
+    geocoded_by :address
+    after_validation :geocode
   end
   
