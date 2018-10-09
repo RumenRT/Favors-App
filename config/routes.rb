@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :profiles 
   resources :favors 
 
-  
+  post '/favors/create', to: "favors#create"
 
   
 end
