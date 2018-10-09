@@ -1,24 +1,25 @@
 <%= form_with url: favors_create_path,  scope: :post do |form| %>
 
+<div id="newfavorcomplete">
+<hr>
   </div>
-        <div class="field col-md-10">
+        <div class="field col-md-10" id="newfavcat">
         <%= form.label :category %>
         <%= form.text_field :category %>
   </div>
-</div>
-
   
+</div>
    <div class="field col-md-10">
         <%= form.label :address %>
         <%= form.text_field :street , placeholder:"Default: Current-Address" %>
     </div>
-    <hr>
+    
    <div class="field col-md-10">
         <%= form.label :description %>
         <%= form.text_field :description %>
     </div>
    
-
+</div>
 <hr>
     <div class="action col-md-10" text-align:center >
         <%= form.submit %>
