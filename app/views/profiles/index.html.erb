@@ -1,22 +1,20 @@
 
 
-<h1 align="center" style="background-color: teal;"> <%= @profiles.first_name %>'s Profile</h1>
+<h1 id= "nameprofile"> <%= @profiles.first_name %>'s Profile</h1>
 
-  <div>
+  <div id="mainprofile">
     <ul class="list-group" id="listgroup">
       <li class="list-group-item"><p>First Name:</p><%= @profiles.first_name %></li>
       <li class="list-group-item"><p>Age:</p><%= @profiles.age %></li>
       <li class="list-group-item"><p>Favors completed:</p><%= @profiles.favors_completed %></li>
       <li class="list-group-item"><p>Favors offered:</p><%= @profiles.favors_offered %></li>
     </ul>
-  </div>
-<div>
-    <form class="form-inline my-2 my-lg-0 col-md-12" id="searchfavor">
+      <form class="form-inline my-2 my-lg-0 col-md-1" id="searchfavor">
       <input class="form-control mr-sm-2" type="search" placeholder="Quick Favor" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Request help</button>
     </form>
-    <hr>
-</div>
+  </div>
+
 <%# <hr> %>
 <div id="favorlist">
 <h4> Open Favors List </h4>

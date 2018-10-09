@@ -2,11 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
  * {
-    // background-color: rgb(21, 184, 184);
     font-family: 'Droid Sans Mono';
     font-weight: bolder;
 }
+#nameprofile {
+    margin: 10px;
+    padding: 0px 30px;
+    text-align: center;
+    background-color: teal;
+    border-radius: 8px;
+}
 
+#mainprofile {
+    margin: 25px;
+    display: flex;
+    align-content: center;
+}
 #listgroup {
     text-align: center;
     border-radius: 10px; 
@@ -22,6 +33,10 @@
     box-sizing: content-box;
     background-color: lightgoldenrodyellow;
 }
+#favorlist h4 {
+    font-family: 'Droid Sans Mono';
+    font-style: italic; 
+    color: blue }
 #favorscompleted {
     text-align: center;
     border-radius: 10px; 
@@ -32,6 +47,12 @@
     box-sizing: content-box;
     background-color: lightgoldenrodyellow
 }
+#favorscompleted h4 {
+    font-family: 'Droid Sans Mono';
+    font-style: italic; 
+    color: blue 
+}
+
 .list-group-item {
     
     color: white;
