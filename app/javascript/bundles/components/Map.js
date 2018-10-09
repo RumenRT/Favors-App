@@ -18,10 +18,11 @@ export default class Map extends React.Component {
       let data;
       let favors;
       const geolocationOptions = {
-        enableHighAccuracy: true,
+        enableHighAccuracy: true,  
         maximumAge: 30000,
         timeout: 27000
       } 
+      // options for mapbox comp
       const mapOptions = {
         container: this.mapContainer,
         style: `mapbox://styles/mapbox/streets-v9`,
@@ -36,17 +37,28 @@ export default class Map extends React.Component {
       await this.createMap(mapOptions, geolocationOptions);
     }
 
-
+  // initializes maps
   createMap = (mapOptions, geolocationOptions) => {
     this.map = new mapboxgl.Map(mapOptions);
     const map = this.map;
 
-    map.addControl(
+    // appends geolocator button
+    map.addControl( 
       new mapboxgl.GeolocateControl({
         positionOptions: geolocationOptions,
         trackUserLocation: true
       })
-    )
+    );
+
+    //appends zoom in/out control
+    map.addControl(
+      new mapboxgl.NavigationControl({
+        positionOptions: geolocationOptions,
+        trackUserLocation: true
+      })
+    );
+
+    // on map load fetches favors
     map.on('load', (event) => {
       this.fetchFavors();
     });
