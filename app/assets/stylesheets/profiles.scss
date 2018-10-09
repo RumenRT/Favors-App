@@ -1,34 +1,39 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-* {
+ * {
     // background-color: rgb(21, 184, 184);
-    font-family: Courier;
+    font-family: 'Droid Sans Mono';
+    font-weight: bolder;
 }
 
 #listgroup {
     text-align: center;
+    border-radius: 10px; 
     background-color: rgb(21, 184, 184);
 }
 #favorlist {
     text-align: center;
+    border-radius: 10px; 
     width:  center 300px;
-    border: 25px solid teal;
-    padding: 10px;
-    margin: 10px;
-    box-sizing: content-box;
-    background-color: rgb(255, 175, 55);
-}
-#favorscompleted {
-    text-align: center;
-    width:  center 150px;
     border: 10px solid teal;
     padding: 10px;
     margin: 10px;
     box-sizing: content-box;
-    background-color: rgb(255, 175, 55);
+    background-color: lightgoldenrodyellow;
+}
+#favorscompleted {
+    text-align: center;
+    border-radius: 10px; 
+    width:  center 150px;
+    border: 10px solid teal;
+    padding: 10px 10px;
+    margin: 10px 10px ;
+    box-sizing: content-box;
+    background-color: lightgoldenrodyellow
 }
 .list-group-item {
+    
     color: white;
     background-color: rgb(21, 184, 184);
 }
@@ -43,9 +48,6 @@
 }
 
 #navbar {
-    border: 1px solid #555;
-}
 
-.field {
-    
+    // border: 1px solid #555;
 }
