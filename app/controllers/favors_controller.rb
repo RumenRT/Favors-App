@@ -40,7 +40,16 @@ class FavorsController < ApplicationController
 
     end
 
+    def new
+      @favor = Favor.new
+    end 
+
     def create
+      params.permit!
+      @favor = Favor.new(params[:post])
+      @favor.user = current_user
+      @favor.save 
+      redirect_to favors_path
     end
 
     def destroy
