@@ -14,20 +14,28 @@
 }
 
 #mainprofile {
-    margin: 25px;
+    width: auto;
+    margin: 5px 40px ;
     display: flex;
     align-content: center;
+    border: 10px solid turquoise;
+    border-radius: 10px;
 }
 #listgroup {
+    margin: 10px;
     text-align: center;
+    padding: 10px;
     border-radius: 10px; 
     background-color: rgb(21, 184, 184);
 }
+
+
 #favorlist {
+    box-shadow: 4px 7px teal;
     text-align: center;
     border-radius: 10px; 
     width:  center 300px;
-    border: 10px solid teal;
+    border: 10px solid turquoise;
     padding: 10px;
     margin: 10px;
     box-sizing: content-box;
@@ -38,10 +46,11 @@
     font-style: italic; 
     color: blue }
 #favorscompleted {
+    box-shadow: 4px 7px teal;
     text-align: center;
     border-radius: 10px; 
     width:  center 150px;
-    border: 10px solid teal;
+    border: 10px solid turquoise;
     padding: 10px 10px;
     margin: 10px 10px ;
     box-sizing: content-box;
@@ -60,6 +69,7 @@
 }
 
 #searchfavor {
+    padding: 10px;
     text-align: center;
     width:  center;
 }
