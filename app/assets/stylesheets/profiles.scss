@@ -7,6 +7,10 @@
     font-weight: bolder;
 }
 
+#mainprofile {
+    display: flex;
+    align-content: center;
+}
 #listgroup {
     text-align: center;
     border-radius: 10px; 
@@ -22,6 +26,10 @@
     box-sizing: content-box;
     background-color: lightgoldenrodyellow;
 }
+#favorlist h4 {
+    font-family: 'Droid Sans Mono';
+    font-style: italic; 
+    color: blue }
 #favorscompleted {
     text-align: center;
     border-radius: 10px; 
@@ -32,6 +40,11 @@
     box-sizing: content-box;
     background-color: lightgoldenrodyellow
 }
+#favorscompleted h4 {
+    font-family: 'Droid Sans Mono';
+    font-style: italic; 
+    color: blue }
+
 .list-group-item {
     
     color: white;
