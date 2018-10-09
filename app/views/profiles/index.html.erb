@@ -3,7 +3,7 @@
 <h1 align="center" style="background-color: teal;"> <%= @profiles.first_name %>'s Profile</h1>
 
   <div>
-    <ul class="list-group">
+    <ul class="list-group" id="listgroup">
       <li class="list-group-item"><p>First Name:</p><%= @profiles.first_name %></li>
       <li class="list-group-item"><p>Age:</p><%= @profiles.age %></li>
       <li class="list-group-item"><p>Favors completed:</p><%= @profiles.favors_completed %></li>
@@ -11,14 +11,16 @@
     </ul>
   </div>
 <div>
-    <form class="form-inline my-2 my-lg-0 col-md-4">
+    <form class="form-inline my-2 my-lg-0 col-md-12" id="searchfavor">
       <input class="form-control mr-sm-2" type="search" placeholder="Quick Favor" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Request help</button>
     </form>
     <hr>
 </div>
+<%# <hr> %>
+<div id="favorlist">
 <h4> Open Favors List </h4>
-<div>
+
 <table class="table">
   <thead>
     <tr>
@@ -49,9 +51,10 @@
   </tbody>
 </table>
 </div>
-<hr>
+<%# <hr> %>
+<div id="favorscompleted">
 <h4> Favors Completed </h4>
-<div>
+
 <table class="table">
   <thead>
     <tr>
@@ -92,7 +95,7 @@
     <footer class="navbar navbar-fixed-bottom navbar-inverse" style="background-color: teal;">
       <div class="container">
         <nav>
-          <ul class="nav navbar-nav navbar-center" style="background-color: teal;">
+          <ul class="nav navbar-nav navbar-center" style="background-color: teal;" id="navbar">
             <li><%= link_to "Home",   './profiles#index' %> </li>
             <li><%= link_to "Map", './favors#index', id: "logo" %> </li>
             <li><%= link_to "New Favor", './favors/new', id: "logo" %> </li>
