@@ -17,72 +17,50 @@
 
 <%# <hr> %>
 <div id="favorlist">
-<h4> Open Favors List </h4>
+<h4> Your Open-Favors </h4>
 
 <table class="table">
   <thead>
     <tr>
+      <th scope="col">Date</th>
       <th scope="col">Category</th>
-      <th scope="col">Description</th>
-      <th scope="col">Street</th>
+      <th scope="col">Location</th>
+
     </tr>
   </thead>
   <tbody>
+    <%# <tr>
+    <%# Instance variable @favors iterate over (favors.each do |favor|
+    favor.description 
+    favor.Category %>
+    <%# </tr> %> 
     <tr>
-      <th scope="row">1</th>
-      <td>first</td>
-      <td>Otto</td>
+      <th scope="row">@favors_offered.date </th>
+      <td>@favors_offered.Category</td>
+      <td>@favors_offered.location</td>
+    </tr>
+    <tr>
+      <th scope="row">@favors_offered.date </th>
+      <td>@favors_offered.Category</td>
+      <td>@favors_offered.location</td>
 
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-   
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
  
+ 
+
+
     </tr>
   </tbody>
 </table>
 </div>
 <%# <hr> %>
-<div id="favorscompleted">
-<h4> Favors Completed </h4>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Category</th>
-      <th scope="col">Description</th>
-      <th scope="col">Street</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
+<% @favors.each do |favor|%>
+<table>
+<tr> <%= favor.id %> </tr>
+<tr> <%= favor.description %> </tr>
    
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
- 
-    </tr>
-  </tbody>
-</table>
-</div>
+<% end %>
+
+
 
 
 
@@ -90,7 +68,7 @@
 
 
 <body>
-    <footer class="navbar navbar-fixed-bottom navbar-inverse" style="background-color: teal;">
+    <footer class="navbar navbar-fixed-bottom navbar-inverse" style="background-color: teal">
       <div class="container" id="navbarprof">
         <nav>
           <ul class="nav navbar-nav navbar-center" style="background-color: teal;" id="navbar">
@@ -105,3 +83,5 @@
     <div class="container">
     </div>
   </body>
+
+ 
