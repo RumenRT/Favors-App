@@ -29,43 +29,17 @@
     </tr>
   </thead>
   <tbody>
-    <%# <tr>
-    <%# Instance variable @favors iterate over (favors.each do |favor|
-    favor.description 
-    favor.Category %>
-    <%# </tr> %> 
-    <tr>
-      <th scope="row">@favors_offered.date </th>
-      <td>@favors_offered.Category</td>
-      <td>@favors_offered.location</td>
-    </tr>
-    <tr>
-      <th scope="row">@favors_offered.date </th>
-      <td>@favors_offered.Category</td>
-      <td>@favors_offered.location</td>
-
- 
- 
-
-
-    </tr>
+  <%# Code that loops all each user's favors and populates each with the defined categories  %>
+    <% @favors.each do |favor|%>
+      <tr>
+        <th scope="row"><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></th>
+        <td><%= favor.category %></td>
+        <td><%= favor.address %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 </div>
-<%# <hr> %>
-<% @favors.each do |favor|%>
-<table>
-<tr> <%= favor.id %> </tr>
-<tr> <%= favor.description %> </tr>
-   
-<% end %>
-
-
-
-
-
-
-
 
 <body>
     <footer class="navbar navbar-fixed-bottom navbar-inverse" style="background-color: teal">
