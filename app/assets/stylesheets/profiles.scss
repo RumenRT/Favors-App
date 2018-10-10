@@ -84,6 +84,9 @@
 }
 
 #navbar {
-
-    // border: 1px solid #555;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 30px;
+    align-items: center;
 }
