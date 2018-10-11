@@ -8,7 +8,8 @@ export default class Popup extends Component {
         <p id="categorypopup"><strong>{this.props.favor.category}</strong></p>
         <p><strong>{this.props.favor.description}</strong></p>
         <p><strong>{this.props.favor.address}</strong></p>
-      </div>
+        <a href={`/favors/${this.props.favor.id}`}>Claim Favor</a>
+      </div >
     )
   }
 }
