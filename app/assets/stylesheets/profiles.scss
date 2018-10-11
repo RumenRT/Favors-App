@@ -16,6 +16,7 @@
     text-align: center;
     background-color: teal;
     border-radius: 8px;
+    box-sizing: content-box;
 }
 
 #mainprofile {
@@ -76,7 +77,7 @@
 #searchfavor {
     padding: 10px;
     text-align: center;
-    width:  center;
+    width:  auto;
 }
 
 .table {
