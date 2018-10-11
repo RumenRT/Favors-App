@@ -17,5 +17,20 @@
 
   <body>
     <%= yield %>
+    <footer class="navbar navbar-fixed-bottom navbar-inverse" style="background-color: teal">
+      <div class="container" id="navbarprof">
+        <nav>
+          <ul class="nav navbar-nav navbar-center" style="background-color: teal;" id="navbar">
+            <li><%= link_to "Home",   './profiles#index' %> </li>
+            <li><%= link_to "Map", './favors#index', id: "logo" %> </li>
+            <li><%= link_to "New Favor", './favors/new', id: "logo" %> </li>
+            <li><%= link_to "Favors Near You", './favorbrowsers', id: "logo" %></li>
+            <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log Out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <div class="container">
+    </div>
   </body>
 </html>

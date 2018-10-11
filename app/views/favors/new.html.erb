@@ -10,6 +10,7 @@
             <li><%= link_to "Home",   profiles_path %> </li>
             <li><%= link_to "Map", favors_path, id: "logo" %> </li>
             <li><%= link_to "New Favor", '.#new', id: "logo" %> </li>
+            <li><%= link_to "Favors Near You", './favor_browser#index', id: "logo" %></li>
             <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log Out</a></li>
           </ul>
         </nav>

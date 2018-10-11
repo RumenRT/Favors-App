@@ -4,21 +4,3 @@
 <%= react_component 'Map',
     props: { coordinates: @coordinates} %>
 
-
-<%# Navigation Bar Structure Below %>
- <body>
-    <header class="navbar navbar-dark navbar-fixed-bottom navbar-inverse" style="background-color: teal;">
-      <div class="container" id="navbarmain">
-        <nav>
-          <ul class="nav navbar-nav  navbar-center" >
-            <li class="text-light"><%= link_to "Home",   './profiles#index' %></li>
-            <li><%= link_to "Map", './favors#index', id: "logo" %></li>
-            <li><%= link_to "New Favor", './favors/new', id: "logo" %></li>
-            <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log Out</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div class="container">
-    </div>
-  </body>
