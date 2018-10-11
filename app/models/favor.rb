@@ -12,6 +12,18 @@ class Favor < ApplicationRecord
     end
 
     geocoded_by :address
-    after_validation :geocode
-  end
+    before_validation :delete_address, if: :use_current_location
+    after_validation :geocode, if: -> {address.present?}
+
+    def delete_address
+        self.street   = nil
+        self.city     = nil
+        self.state    = nil
+        self.country  = nil
+    end
+    
+    def has_location?
+        self.latitude.present? && self.longitude.present?
+    end
+end
   
