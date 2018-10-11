@@ -1,12 +1,10 @@
-import React, {
-  Component
-} from 'react';
+import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl';
 import axios from 'axios';
 import ReactDOMServer from 'react-dom/server'
 import Popup from './Popup'
 
-export default class Map extends React.Component {
+export default class Map extends Component {
   constructor() {
     super()
     this.state = {

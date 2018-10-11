@@ -48,8 +48,14 @@ class FavorsController < ApplicationController
       params.permit!
       @favor = Favor.new(params[:post])
       @favor.user = current_user
-      @favor.save 
-      redirect_to favors_path
+      # notice does not work?
+      if @favor.save 
+         redirect_to favors_path,
+          notice: 'Favor was successfully created.'
+      else
+        redirect_to favors_path,
+          alert: "Could not save favor: #{@favor.errors.full_messages.join(', ')}"
+      end
     end
 
     def destroy
