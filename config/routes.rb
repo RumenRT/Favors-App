@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'hello_world', to: 'hello_world#index'
+  get 'favorbrowsers', to: 'favor_browser#index'
+
   devise_for :users
   
   root 'profiles#index'

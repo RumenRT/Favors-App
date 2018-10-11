@@ -1,0 +1,21 @@
+<h1 font-color="white" align="center" style="background-color: teal;" text-light>Favors Near You</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col" class="text-left">Category</th>
+      <th scope="col" class="text-left">Latitude</th>
+      <th scope="col" class="text-left">Longitude</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @favors.each.with_index do |favor, index| %>
+    <tr>
+      <th scope="row"><%= index + 1 %></th>
+      <td class="text-left"><%= favor.category %></td>
+      <td class="text-left"><%= favor.latitude %></td>
+      <td class="text-left"><%= favor.longitude %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
