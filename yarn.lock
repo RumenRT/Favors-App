@@ -1320,6 +1320,10 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@^2.2.5:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+
 cliui@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cliui/-/cliui-2.1.0.tgz#4b475760ff80264c762c3a1719032e91c7fea0d1"
@@ -4992,6 +4996,12 @@ react-on-rails@11.1.6:
   dependencies:
     "@babel/runtime-corejs2" "^7.0.0"
 
+react-table@6.8.5:
+  version "6.8.5"
+  resolved "https://registry.yarnpkg.com/react-table/-/react-table-6.8.5.tgz#88460a98d6e7c28ba323b1ceb6db3f4eab9c3357"
+  dependencies:
+    classnames "^2.2.5"
+
 react@^16.5.2:
   version "16.5.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.5.2.tgz#19f6b444ed139baa45609eee6dc3d318b3895d42"
@@ -5000,6 +5010,10 @@ react@^16.5.2:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     schedule "^0.5.0"
+
+react_ujs@^2.4.4:
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/react_ujs/-/react_ujs-2.4.4.tgz#49bac535d24024a96b0a35d7514d18188aea42bc"
 
 read-cache@^1.0.0:
   version "1.0.0"
