@@ -13,16 +13,6 @@ export default class Map extends Component {
     window.map = this
   }
 
-  claimFavor = (favor) => {
-    axios.put(`/favors/${favor.id}`,
-      {
-        favor: {
-          performer_id: this.props.currentUser.id
-        }
-      }
-    )
-  }
-
   async componentDidMount() {
     let data;
     let favors;

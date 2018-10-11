@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 2018_10_11_193405) do
     t.string "state"
     t.string "country"
     t.boolean "use_current_location", default: false, null: false
-    t.integer "peformer_id"
-    t.index ["peformer_id"], name: "index_favors_on_peformer_id"
+    t.integer "performer_id"
+    t.index ["performer_id"], name: "index_favors_on_performer_id"
     t.index ["user_id"], name: "index_favors_on_user_id"
   end
 

@@ -62,10 +62,11 @@ class FavorsController < ApplicationController
 
   def update
     @favor = Favor.find(params[:id])
-    @favor.update(performer_id: params[:favor][:performer_id])
-    head :ok
+    @favor.update(performer_id: current_user.id)
+    redirect_to @favor
   end 
 
   def show
+    @favor = Favor.find(params[:id])
   end
 end
