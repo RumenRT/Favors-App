@@ -1,4 +1,4 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
 
 export default class Popup extends Component {
 
@@ -8,6 +8,7 @@ export default class Popup extends Component {
         <p><strong>{this.props.favor.category}</strong></p>
         <p><strong>{this.props.favor.description}</strong></p>
         <p><strong>{this.props.favor.address}</strong></p>
+        <button onClick={ () => {console.log("okokokok")}}>Perform Favor</button>
       </div>
     )
   }

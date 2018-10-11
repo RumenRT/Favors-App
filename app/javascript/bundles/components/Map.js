@@ -12,6 +12,17 @@ export default class Map extends Component {
     }
     window.map = this
   }
+
+  claimFavor = (favor) => {
+    axios.put(`/favors/${favor.id}`,
+      {
+        favor: {
+          performer_id: this.props.currentUser.id
+        }
+      }
+    )
+  }
+
   async componentDidMount() {
     let data;
     let favors;
@@ -77,7 +88,10 @@ export default class Map extends Component {
           elm.className = `${favor.properties.category}`
           let popup = new mapboxgl.Popup({ offset: 25 })
             .setHTML(ReactDOMServer.renderToStaticMarkup(
-              <Popup favor={favor.properties}></Popup>
+              <Popup
+                favor={favor.properties}
+                claimFavor={this.claimFavor}
+              ></Popup>
             ))
           let marker = new mapboxgl.Marker(elm)
             .setLngLat(favor.geometry.coordinates)

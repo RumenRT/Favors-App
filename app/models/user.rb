@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one :profile
   has_many :favors
+  has_many :performing_favors, class_name: "Favor", foreign_key: "performer_id"
 end
 
 # add trackable

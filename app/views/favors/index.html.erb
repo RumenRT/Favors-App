@@ -2,7 +2,11 @@
 
 
 <%= react_component 'Map',
-    props: { coordinates: @coordinates} %>
+    props:  { 
+              coordinates: @coordinates,
+              currentUser: current_user
+            } 
+%>
 
 
 <%# Navigation Bar Structure Below %>

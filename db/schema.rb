@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_10_214207) do
+ActiveRecord::Schema.define(version: 2018_10_11_193405) do
 
   create_table "favors", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2018_10_10_214207) do
     t.string "state"
     t.string "country"
     t.boolean "use_current_location", default: false, null: false
+    t.integer "peformer_id"
+    t.index ["peformer_id"], name: "index_favors_on_peformer_id"
     t.index ["user_id"], name: "index_favors_on_user_id"
   end
 
