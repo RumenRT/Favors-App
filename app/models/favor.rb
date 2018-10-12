@@ -11,6 +11,9 @@ class Favor < ApplicationRecord
     
     belongs_to :user
     belongs_to :performer, class_name: "User", optional: true
+    has_many :notifications
+
+    scope :with_new_notifications, -> { joins(:notifications).where("notifications.created_at > ?", 1.day.ago ) }
 
     def address 
         [street, city, state, country].compact.join(', ')

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  favor: one
+  performer_id: 1
+
+two:
+  user: two
+  favor: two
+  performer_id: 1

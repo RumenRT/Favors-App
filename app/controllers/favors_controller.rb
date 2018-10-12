@@ -50,7 +50,8 @@ class FavorsController < ApplicationController
     @favor.user = current_user
     # notice does not work?
     if @favor.save 
-        redirect_to favors_path, notice: 'Favor was successfully created.'
+
+      redirect_to favors_path, notice: 'Favor was successfully created.'
     else
       redirect_to favors_path, alert: "Could not save favor: #{@favor.errors.full_messages.join(', ')}"
     end
@@ -61,8 +62,9 @@ class FavorsController < ApplicationController
 
   def update
     @favor = Favor.find(params[:id])
-    @favor.update(performer_id: current_user.id)
+    @favor.update(performer_id: current_user.id) if params[:performer_id]
     @favor.save
+    Notification.create(user: @favor.user, performer_id: current_user.id, favor: @favor) if params[:performer_id]
     redirect_to @favor
   end 
 

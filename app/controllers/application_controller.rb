@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
     before_action :send_user_to_create_profile_unless_profile_exists
     # before_action :check_for_profile
 
+    def users_notifications
+        Notification.joins( :favor ).where(user_id: current_user.id).order(created_at: :desc)
+    end
+
     private
     def send_user_to_create_profile_unless_profile_exists
         unless devise_controller? || current_user.profile 
