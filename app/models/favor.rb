@@ -6,7 +6,7 @@ class Favor < ApplicationRecord
         companionship: 2 
     }
     belongs_to :user
-    belongs_to :performer, class_name: "User"
+    belongs_to :performer, class_name: "User", optional: true
 
     def address 
         [street, city, state, country].compact.join(', ')

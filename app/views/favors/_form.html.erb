@@ -9,12 +9,10 @@
             <%= form.check_box :use_current_location,  id: :favor_use_current_location  %>
         </div>
         <div>
-            <%= form.label :latitude %>
-            <%= form.text_field :latitude, readonly: true %>
+            <%= form.hidden_field :latitude, readonly: true %>
         </div>
         <div >
-            <%= form.label :longitude %>
-            <%= form.text_field :longitude, readonly: true %>
+            <%= form.hidden_field :longitude, readonly: true %>
         </div>
         <div>
             <%= form.label :address %>
