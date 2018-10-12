@@ -11,6 +11,11 @@
 h1 {
   color: white;}
 
+
+  .navbar-inverse .navbar-nav>li>a {
+    color: white;}
+  h1 {
+    color: white;}
 .lifting {
   background-image: url("https://png.icons8.com/ultraviolet/50/000000/flex-biceps.png");
   background-size: cover;
@@ -61,3 +66,4 @@ h1 {
 https: //png.icons8.com/material/50/000000/search-more.png */
 /* https://png.icons8.com/office/40/000000/broom.png */
 /* "https://png.icons8.com/dusk/40/000000/development-skill.png" */
+
