@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>FavorsApp</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <%= csp_meta_tag %>     
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'App' %>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </head>
-
   <body>
-    <%= yield %>
-    <footer class="navbar navbar-fixed-bottom navbar-inverse" style="background-color: teal">
-      <div class="container" id="navbarprof">
+
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse" style="background-color: teal;">
+      <div class="container">
         <nav>
-          <ul class="nav navbar-nav navbar-center" style="background-color: teal;" id="navbar">
-            <li><%= link_to "Home", profiles_path %> </li>
-            <li><%= link_to "Map", favors_path %> </li>
+          <ul class="nav navbar-nav navbar-center" style="background-color: teal;">
+            <li><%= link_to "Home",   profiles_path %> </li>
+            <li><%= link_to "Map", favors_path  %> </li>
             <li><%= link_to "New Favor", new_favor_path %> </li>
-            <li><%= link_to "Favors Near You", favorbrowsers_path %></li>
+            <li><%= link_to "Listings", favorbrowsers_path %></li>
             <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log Out</a></li>
           </ul>
         </nav>
       </div>
-    </footer>
-    <div class="container">
-    </div>
-  </body>
+    </nav>
+    <%= yield %>
+   </body>
 </html>
+  
+
+  

@@ -1,0 +1,14 @@
+<div style="background-color: black;">
+
+    <h1><%= @favor.description %></h1>
+
+    <%if @favor.performer %>
+        <h3><%= @favor.performer.profile.first_name %> is doing it!</h3>  
+    <% else %>
+        <%= form_with(model: @favor) do |form| %>
+            <%= form.submit "Claim favor" %>
+        <% end %>
+    <% end %>
+
+</div> 
+

@@ -1,12 +1,63 @@
-.mapboxgl-marker {
+/* .mapboxgl-marker {
   background-image: url('https://i.imgur.com/nHO6Z7F.png');
   background-size: cover;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
-}
+} */
 .navbar-inverse .navbar-nav>li>a {
   color: white;}
 h1 {
   color: white;}
+
+.lifting {
+  background-image: url("https://png.icons8.com/ultraviolet/50/000000/flex-biceps.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.companionship {
+  background-image: url("https://png.icons8.com/nolan/50/000000/handshake.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.searching {
+  background-image: url("https://png.icons8.com/material/50/000000/search-more.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cleaning {
+  background-image: url("https://png.icons8.com/office/40/000000/broom.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.expertise {
+  background-image: url("https://png.icons8.com/dusk/40/000000/development-skill.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+/* https: //png.icons8.com/nolan/50/000000/handshake.png
+https: //png.icons8.com/material/50/000000/search-more.png */
+/* https://png.icons8.com/office/40/000000/broom.png */
+/* "https://png.icons8.com/dusk/40/000000/development-skill.png" */
