@@ -1,42 +1,39 @@
-<%= form_with url: favors_create_path,  scope: :post do |form| %>
+<%= form_with url: favors_create_path,  scope: :post, remote: true do |form| %>
+
+    <%= form.select(:category, Favor.categories.map{ |cat| cat }, {}, class: "custom-select" ) %>
+
     <div>
-        <div>
-            <%= form.label :category %>
-            <%= form.text_field :category, class: "text_input" %>
-        </div>   
-        <div>
-            <%= form.label :use_current_location %>
-            <%= form.check_box :use_current_location,  id: :favor_use_current_location  %>
-        </div>
-        <div>
-            <%= form.hidden_field :latitude, readonly: true %>
-        </div>
-        <div >
-            <%= form.hidden_field :longitude, readonly: true %>
-        </div>
-        <div>
-            <%= form.label :address %>
-            <%= form.text_field :street, class: "text_input"  %>
-        </div>
-        <div>
-            <%= form.label :city %>
-            <%= form.text_field :city, class: "text_input" %>
-        </div>
-        <div>
-            <%= form.label :state %>
-            <%= form.text_field :state, class: "text_input" %>
-        </div>
-        <div>
-            <%= form.label :country %>
-            <%= form.text_field :country, class: "text_input" %>
-        </div>
-        <div>
-            <%= form.label :description %>
-            <%= form.text_field :description, class: "text_input" %>
-        </div>
-        <div>
-            <%= form.submit %>
-        </div>
+        <%= form.label :use_current_location %>
+        <%= form.check_box :use_current_location,  id: :favor_use_current_location  %>
+    </div>
+    <div>
+        <%= form.hidden_field :latitude, readonly: true %>
+    </div>
+    <div >
+        <%= form.hidden_field :longitude, readonly: true %>
+    </div>
+    <div>
+        <%= form.label :address %>
+        <%= form.text_field :street, class: "text_input"  %>
+    </div>
+    <div>
+        <%= form.label :city %>
+        <%= form.text_field :city, class: "text_input" %>
+    </div>
+    <div>
+        <%= form.label :state %>
+        <%= form.text_field :state, class: "text_input" %>
+    </div>
+    <div>
+        <%= form.label :country %>
+        <%= form.text_field :country, class: "text_input" %>
+    </div>
+    <div>
+        <%= form.label :description %>
+        <%= form.text_field :description, class: "text_input" %>
+    </div>
+    <div>
+        <%= form.submit %>
     </div>
 <% end %>
 

@@ -3,8 +3,12 @@ class Favor < ApplicationRecord
     enum category: { 
         lifting: 0, 
         searching: 1,
-        companionship: 2 
+        companionship: 2,
+        expertise: 3,
+        cleaning: 4
+
     }
+    
     belongs_to :user
     belongs_to :performer, class_name: "User", optional: true
 
