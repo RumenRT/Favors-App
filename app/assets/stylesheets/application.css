@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ .backgrdiv {
+  background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
+ }
+
 #link_id {
   text-decoration: none;
   color: black;
@@ -25,6 +29,21 @@
   text-align: center;
 }
 
+nav.navbar {
+  margin-bottom: 0
+}
+.mainlogin {
+  text-align: center;
+}
+.mainlogin h2{
+  color: teal;
+  font-weight: bolder
+}
+
+.action input[type=submit] {
+  height: 40px;
+  width: 50%;
+}
 /* h2 {
   font-family: "Garamond"
 } */

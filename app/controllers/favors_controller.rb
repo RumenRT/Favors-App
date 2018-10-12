@@ -45,15 +45,14 @@ class FavorsController < ApplicationController
 
   def create
     params.permit!
-    @favor = Favor.new(params[:post])
+    @favor = Favor.new(favor_params)
+    @favor.category =  params[:post][:category].to_i
     @favor.user = current_user
     # notice does not work?
     if @favor.save 
-        redirect_to favors_path,
-        notice: 'Favor was successfully created.'
+        redirect_to favors_path, notice: 'Favor was successfully created.'
     else
-      redirect_to favors_path,
-        alert: "Could not save favor: #{@favor.errors.full_messages.join(', ')}"
+      redirect_to favors_path, alert: "Could not save favor: #{@favor.errors.full_messages.join(', ')}"
     end
   end
 
@@ -63,10 +62,16 @@ class FavorsController < ApplicationController
   def update
     @favor = Favor.find(params[:id])
     @favor.update(performer_id: current_user.id)
+    @favor.save
     redirect_to @favor
   end 
 
   def show
     @favor = Favor.find(params[:id])
+  end
+
+  private
+  def favor_params
+    params.require(:post).permit(:user_id, :description, :latitude, :longitude, :ip, :street, :city, :state, :country, :use_current_location, :performer_id )
   end
 end

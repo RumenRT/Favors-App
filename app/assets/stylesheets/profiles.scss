@@ -10,9 +10,12 @@
     text-align: center;
 
 }
+h1#nameprofile {
+    margin: 0;
+}
 #nameprofile {
-    margin: 10px;
-    padding: 0px 30px;
+    margin: 2px;
+
     text-align: center;
     background-color: teal;
     border-radius: 8px;
@@ -45,7 +48,7 @@
     padding: 10px;
     margin: 10px;
     box-sizing: content-box;
-    background-color: lightgoldenrodyellow;
+    background-color: whitesmoke;
 }
 #favorlist h4 {
     font-family: 'Droid Sans Mono';
@@ -60,7 +63,7 @@
     padding: 10px 10px;
     margin: 10px 10px ;
     box-sizing: content-box;
-    background-color: lightgoldenrodyellow
+    background-color: whitesmoke
 }
 #favorscompleted h4 {
     font-family: 'Droid Sans Mono';
