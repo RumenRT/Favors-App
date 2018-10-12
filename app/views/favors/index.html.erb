@@ -1,6 +1,12 @@
-<h1 font-color="white" align="center" style="background-color: teal;" text-light>Favors Near You</h1>
+<div class="backgrdiv">
+<h1 class="backgrdiv" font-color="white" align="center"  text-light>Favors Near You</h1>
 
 
 <%= react_component 'Map',
-    props: { coordinates: @coordinates} %>
+    props:  { 
+              coordinates: @coordinates,
+              currentUser: current_user
+            } 
+%>
 
+</div>
