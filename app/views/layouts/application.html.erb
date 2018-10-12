@@ -27,6 +27,9 @@
             <li><%= link_to "New Favor", new_favor_path %> </li>
             <li><%= link_to "Listings", favorbrowsers_path %></li>
             <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log Out</a></li>
+            <li class="float-right">
+              <%= render 'notifications/index' unless current_user.favors.with_new_notifications.empty? %>
+            </li>
           </ul>
         </nav>
       </div>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'notifications/index'
+  get 'notifications/destroy'
   get 'hello_world', to: 'hello_world#index'
   get 'favorbrowsers', to: 'favor_browser#index'
 

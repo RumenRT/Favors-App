@@ -6,6 +6,7 @@
         <h3><%= @favor.performer.profile.first_name %> is doing it!</h3>  
     <% else %>
         <%= form_with(model: @favor) do |form| %>
+            <%= hidden_field_tag "performer_id", current_user.id %>
             <%= form.submit "Claim favor" %>
         <% end %>
     <% end %>

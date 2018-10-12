@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_11_193405) do
+ActiveRecord::Schema.define(version: 2018_10_12_210618) do
 
   create_table "favors", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(version: 2018_10_11_193405) do
     t.integer "performer_id"
     t.index ["performer_id"], name: "index_favors_on_performer_id"
     t.index ["user_id"], name: "index_favors_on_user_id"
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "favor_id"
+    t.integer "performer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["favor_id"], name: "index_notifications_on_favor_id"
+    t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
