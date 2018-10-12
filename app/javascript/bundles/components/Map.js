@@ -63,6 +63,7 @@ export default class Map extends Component {
     // on map load fetches favors
     map.on('load', (event) => {
       this.fetchFavors();
+      this.addCircle();
     });
   }
 
@@ -85,6 +86,54 @@ export default class Map extends Component {
           marker.addTo(map)
         })
       })
+  }
+
+  addCircle = () => {
+    var points = 64;
+    var coords = this.map.getCenter();
+    var km = 1;
+
+    var ret = [];
+    var distanceX = km/(111.320*Math.cos(coords.lat*Math.PI/180));
+    var distanceY = km/110.574;
+
+    var theta, x, y;
+    for(var i=0; i<points; i++) {
+        theta = (i/points)*(2*Math.PI);
+        x = distanceX*Math.cos(theta);
+        y = distanceY*Math.sin(theta);
+
+        ret.push([coords.lng+x, coords.lat+y]);
+    }
+    ret.push(ret[0]);
+
+    console.log(ret);
+
+    this.map.addSource("polygon",
+      {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [ret]
+                }
+            }]
+        }
+      } 
+    );
+    this.map.addLayer({
+        "id": "polygon",
+        "type": "fill",
+        "source": "polygon",
+        "layout": {},
+        "paint": {
+            "fill-color": "teal",
+            "fill-opacity": 0.2
+        }
+    });
   }
 
   render() {
