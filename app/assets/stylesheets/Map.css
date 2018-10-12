@@ -38,6 +38,26 @@ h1 {
   cursor: pointer;
 }
 
+.cleaning {
+  background-image: url("https://png.icons8.com/office/40/000000/broom.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.expertise {
+  background-image: url("https://png.icons8.com/dusk/40/000000/development-skill.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 
 /* https: //png.icons8.com/nolan/50/000000/handshake.png
 https: //png.icons8.com/material/50/000000/search-more.png */
+/* https://png.icons8.com/office/40/000000/broom.png */
+/* "https://png.icons8.com/dusk/40/000000/development-skill.png" */
