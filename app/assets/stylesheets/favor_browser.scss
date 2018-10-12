@@ -1,6 +1,16 @@
 // Place all the styles related to the FavorBrowser controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#favorbrowser {
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px; 
+    background-color: rgb(21, 184, 184);
+    margin-right: 10px;
+}
 #backgrdivr {
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
    }
+
