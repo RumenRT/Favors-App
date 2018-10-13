@@ -25,7 +25,7 @@ export default class Map extends Component {
     const mapOptions = {
       container: this.mapContainer,
       style: `mapbox://styles/mapbox/streets-v9`,
-      pitch: 43, // pitch in degrees
+      pitch: 15, // pitch in degrees
       bearing: -1, // bearing in degrees
       zoom: 14,
       minZoom: 5,
@@ -98,16 +98,16 @@ export default class Map extends Component {
     var km = 1;
 
     var ret = [];
-    var distanceX = km/(111.320*Math.cos(coords.lat*Math.PI/180));
-    var distanceY = km/110.574;
+    var distanceX = km / (111.320 * Math.cos(coords.lat * Math.PI / 180));
+    var distanceY = km / 110.574;
 
     var theta, x, y;
-    for(var i=0; i<points; i++) {
-        theta = (i/points)*(2*Math.PI);
-        x = distanceX*Math.cos(theta);
-        y = distanceY*Math.sin(theta);
+    for (var i = 0; i < points; i++) {
+      theta = (i / points) * (2 * Math.PI);
+      x = distanceX * Math.cos(theta);
+      y = distanceY * Math.sin(theta);
 
-        ret.push([coords.lng+x, coords.lat+y]);
+      ret.push([coords.lng + x, coords.lat + y]);
     }
     ret.push(ret[0]);
 
@@ -117,26 +117,26 @@ export default class Map extends Component {
       {
         "type": "geojson",
         "data": {
-            "type": "FeatureCollection",
-            "features": [{
-                "type": "Feature",
-                "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [ret]
-                }
-            }]
+          "type": "FeatureCollection",
+          "features": [{
+            "type": "Feature",
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [ret]
+            }
+          }]
         }
-      } 
+      }
     );
     this.map.addLayer({
-        "id": "polygon",
-        "type": "fill",
-        "source": "polygon",
-        "layout": {},
-        "paint": {
-            "fill-color": "teal",
-            "fill-opacity": 0.2
-        }
+      "id": "polygon",
+      "type": "fill",
+      "source": "polygon",
+      "layout": {},
+      "paint": {
+        "fill-color": "teal",
+        "fill-opacity": 0.2
+      }
     });
   }
 
