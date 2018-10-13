@@ -25,8 +25,8 @@ export default class Map extends Component {
     const mapOptions = {
       container: this.mapContainer,
       style: `mapbox://styles/mapbox/streets-v9`,
-      pitch: 15, // pitch in degrees
-      bearing: -1, // bearing in degrees
+      pitch: 16, // pitch in degrees
+      bearing: 1, // bearing in degrees
       zoom: 14,
       minZoom: 5,
       maxZoom: 25,
@@ -134,8 +134,8 @@ export default class Map extends Component {
       "source": "polygon",
       "layout": {},
       "paint": {
-        "fill-color": "teal",
-        "fill-opacity": 0.2
+        "fill-color": "turquoise",
+        "fill-opacity": 0.3
       }
     });
   }
