@@ -14,7 +14,7 @@ export default class Map extends Component {
   }
 
   async componentDidMount() {
-    let data;
+    let response;
     let favors;
     const geolocationOptions = {
       enableHighAccuracy: true,
@@ -33,8 +33,8 @@ export default class Map extends Component {
       center: [-80.2044, 25.8028]
     }
 
-    data = await axios.get('/favors.json')
-    favors = data.data
+    response = await axios.get('/favors.json')
+    favors = response.data
     this.setState({ myFavors: favors })
     mapboxgl.accessToken = 'pk.eyJ1IjoiYW5keXdlaXNzMTk4MiIsImEiOiJIeHpkYVBrIn0.3N03oecxx5TaQz7YLg2HqA'
     await this.createMap(mapOptions, geolocationOptions);
@@ -74,7 +74,7 @@ export default class Map extends Component {
     await axios.get(`/favors.json`)
       .then((res) => {
         let newMarkers = res.data
-        newMarkers.features.forEach((favor, i) => {
+        newMarkers.features.forEach((favor, _) => {
           var elm = document.createElement('div')
           elm.className = `${favor.properties.category}`
           let popup = new mapboxgl.Popup({ offset: 25 })
@@ -82,6 +82,7 @@ export default class Map extends Component {
               <Popup
                 favor={favor.properties}
                 claimFavor={this.claimFavor}
+                user_id={this.props.user_id}
               ></Popup>
             ))
           let marker = new mapboxgl.Marker(elm)

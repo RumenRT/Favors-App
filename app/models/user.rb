@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_one :profile
   has_many :favors
   has_many :performing_favors, class_name: "Favor", foreign_key: "performer_id"
+  has_many :notifications
 end
 
 # add trackable

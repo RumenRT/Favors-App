@@ -1,14 +1,1 @@
-
-
-
-<%= react_component 'Map',
-    props:  { 
-              coordinates: @coordinates,
-              currentUser: current_user
-            } 
-%>
-<div class="backgrdiv">
-<footer>
-<h1 class="backgrdiv" font-color="white" align="center"  text-light>Favors Near You</h1>
-</footer>
-</div>
+<%= react_component('Map', props: {user_id: current_user.id}, prerender: false)%>
