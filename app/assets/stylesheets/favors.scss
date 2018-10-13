@@ -17,12 +17,14 @@
 h2 {
     color: white;
 }
-a#link_id {
-    color: white;
+#linkies {
+    color: teal;
 }
 #remberme {
-    border: 0px;
-    background-color: teal;
+   border: 0px; 
+   background-color: transparent;
+   color: teal;
+   font-weight: bolder;
 }
 #navbarmain {text-align: center;
 
@@ -40,7 +42,9 @@ a#link_id {
     background-color: teal;
    
 }
-
+#NewFavPageComp  {
+    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
+}
 #newfavcat {
     text-align: center;
 }

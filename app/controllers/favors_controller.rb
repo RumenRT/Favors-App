@@ -58,6 +58,8 @@ class FavorsController < ApplicationController
   end
 
   def destroy
+    Favor.find(params[:id]).delete
+    notice: "Favor has been deleted"
   end
 
   def update
