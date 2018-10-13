@@ -4,7 +4,6 @@ class ProfilesController < ApplicationController
     def index
         @profiles = current_user.profile
         @favors = current_user.favors 
-
     end
 
     def show

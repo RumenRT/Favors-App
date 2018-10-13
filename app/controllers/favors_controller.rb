@@ -29,7 +29,8 @@ class FavorsController < ApplicationController
                             category: favor.category,
                             description: favor.description,
                             address: favor.address,
-                            id: favor.id
+                            id: favor.id,
+                            user_name: favor.user.profile.name
                           }
                         }
                       end
@@ -70,6 +71,13 @@ class FavorsController < ApplicationController
 
   def show
     @favor = Favor.find(params[:id])
+  end
+
+  def claim
+    @favor = Favor.find(params[:favor_id])
+    @favor.update!(performer_id: params[:user_id])
+    Notification.create(user: @favor.user, performer_id: params[:user_id], favor: @favor)
+    redirect_to profiles_path
   end
 
   private
