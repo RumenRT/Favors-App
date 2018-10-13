@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   
   root 'profiles#index'
   resources :profiles 
-  resources :favors 
+  resources :favors do
+    get :claim
+  end
 
   post '/favors/create', to: "favors#create"
 
