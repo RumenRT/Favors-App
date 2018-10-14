@@ -1,25 +1,12 @@
 <div class="backgrdiv">
 
 <h1 id= "nameprofile"> <%= @profiles.first_name %>'s Profile</h1>
-<div class="signup-w3ls">   
-    <div class="signup-agile1">
-        <form action="#" method="post">
-
-            <div class="form-control"> 
-                <label class="header">Profile Photo:</label>
-
-                <input id="image" type="file" name="profile_photo" placeholder="Photo" required="" capture>
-            </div>
-        </form>
-  <div id="mainprofile">
-    <ul class="list-group" id="listgroup">
-    </div>
       <li class="list-group-item"><p>First Name:</p><%= @profiles.first_name %></li>
       <li class="list-group-item"><p>Age:</p><%= @profiles.age %></li>
       <li class="list-group-item"><p>Favors completed:</p><%= @profiles.favors_completed %></li>
       <li class="list-group-item"><p>Favors offered:</p><%= @profiles.favors_offered %></li>
-    </ul>
-     
+  </ul>
+       </div>
     <hr>
     <div>
        <form class="form-inline my-2 my-lg-0 col-md-1" id="searchfavor">
@@ -28,28 +15,29 @@
     </form>
     </div>
   </div>
-
-
 <div id="favorlist">
-<h4>Favors you're assisting with</h4>
-
+<h4 style=>Favors you're assisting with</h4>
 <table class="table">
   <thead>
-    <tr>
+     <tr>
       <th scope="col">Date</th>
       <th scope="col">Category</th>
-      <th scope="col">Location</th>
+      <th scope="col">Description</th>
       <th scope="col">Abandon</th>
     </tr>
   </thead>
   <tbody>
   <%# Code that loops all each user's favors and populates each with the defined categories  %>
+    <tr>
     <% @favors.each do |favor|%>
-      <tr>
-        <th scope="row"><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></th>
-        <td><%= favor.category %></td>
-        <td><%= favor.address %></td>
-      </tr>
+      
+        <% @performer_favors.each do |favor| %>
+         <td><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
+         <td> <%= favor.category%> </td>
+         <td> <%= favor.description%> </td>
+            </tr>
+        <%end%>
+   
     <% end %>
   </tbody>
 </table>

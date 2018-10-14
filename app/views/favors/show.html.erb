@@ -1,22 +1,25 @@
-<div style="background-color: rgb(21, 184, 184);">
-
-    <h1 id="h11"><%= @favor.description %></h1>
-
+<div class="justabackground">
+<h1>Description</h1>
+    <h2><%= @favor.description %></h2>
+<h1>Address</h1>
+    <h2><%= @favor.address %></h2>
+<h1>Category</h1>
+    <h2><%= @favor.category %></h2>
+<h1>Created at</h1>
+    <h2><%= @favor.created_at.to_date.strftime("%-m/%-d/%Y") %></h2>
     <%if @favor.performer %>
-        <h3 id="h33"><%= @favor.performer.profile.first_name %> is helping you!</h3>  
-        <div>
+        <h3><%= @favor.performer.profile.first_name %> is on the task!</h3>  
 
-        <img src="https://media1.tenor.com/images/addfb7eed47bf1413af33d672c06a288/tenor.gif?itemid=12349917" class="center">
-            
-        </div>
     <% else %>
+  <img src="https://media1.tenor.com/images/addfb7eed47bf1413af33d672c06a288/tenor.gif?itemid=12349917" class="center">
+            
     <div class="center">
         <%= form_with(model: @favor) do |form| %>
             <%= hidden_field_tag "performer_id", current_user.id %>
             <%= form.submit "Claim favor" %>
-    </div>
         <% end %>
     <% end %>
+</div>
 
-</div> 
+
 
