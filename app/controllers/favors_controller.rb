@@ -59,8 +59,10 @@ class FavorsController < ApplicationController
   end
 
   def destroy
+
     Favor.find(params[:id]).delete 
     redirect_to profiles_path, notice: 'Favor was deleted successfully'
+
   end
 
   def update
