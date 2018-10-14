@@ -178,13 +178,20 @@ th.text-left {
 .capitalizeme {
     text-transform: capitalize;
 }
-.showmedafava {
+div.showmedafava {
+    padding: 20px;
     margin: 10px 20px 10px 20px;
     border: 2px solid turquoise;
     border-radius: 7px;
     
 }
+
+h1.showmedafava {
+    font-style: italic;
+}
+
 .form {
+
     border-radius: 5px;
     border: 2px solid turquoise;
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)

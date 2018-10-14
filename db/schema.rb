@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_12_210618) do
+ActiveRecord::Schema.define(version: 2018_10_14_203917) do
 
   create_table "favors", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2018_10_12_210618) do
     t.integer "performer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "read_status", default: false
     t.index ["favor_id"], name: "index_notifications_on_favor_id"
     t.index ["user_id"], name: "index_notifications_on_user_id"
   end
@@ -59,6 +60,11 @@ ActiveRecord::Schema.define(version: 2018_10_12_210618) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
