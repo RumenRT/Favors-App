@@ -197,5 +197,20 @@ tr.favorassist {
         margin: 10px;
         box-sizing: content-box;
         background-color: whitesmoke;
+        font-size: 12px;
+    }
+    tr.favorassist {
+        justify-content: center;
+        text-align:center;
+        font-size:13px;
+        text-shadow: 2px;
+        font-style: italic;
+        text-decoration: underline;
+        text-transform:uppercase;
+    }
+    .favorassistt{
+        font-size: 12px;
+        padding: 1px, 1px, 1px, 1px;
+        text-align: center;
     }
 }
