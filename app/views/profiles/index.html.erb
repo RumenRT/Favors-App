@@ -6,7 +6,7 @@
       <li class="list-group-item"><p>Favors completed:</p><%= @profiles.favors_completed %></li>
       <li class="list-group-item"><p>Favors offered:</p><%= @profiles.favors_offered %></li>
   </ul>
-    </div>
+       </div>
     <hr>
     <div>
        <form class="form-inline my-2 my-lg-0 col-md-1" id="searchfavor">
@@ -22,18 +22,22 @@
      <tr>
       <th scope="col">Date</th>
       <th scope="col">Category</th>
-      <th scope="col">Location</th>
+      <th scope="col">Description</th>
       <th scope="col">Abandon</th>
     </tr>
   </thead>
   <tbody>
   <%# Code that loops all each user's favors and populates each with the defined categories  %>
+    <tr>
     <% @favors.each do |favor|%>
-      <tr>
+      
         <% @performer_favors.each do |favor| %>
-          <%= favor.description%>
+         <td><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
+         <td> <%= favor.category%> </td>
+         <td> <%= favor.description%> </td>
+            </tr>
         <%end%>
-      </tr>
+   
     <% end %>
   </tbody>
 </table>
