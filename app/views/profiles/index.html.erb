@@ -1,9 +1,9 @@
-<div >
+<div class="container">
 
 <h1 id= "nameprofile"> <%= @profiles.first_name %>'s Profile</h1>
  <div>
-    <img src="http://i.imgur.com/CrOKjtY.jpg" style="width:250px;height:250px;" class="profilepic">
-    </div>
+    <img src="http://i.imgur.com/CrOKjtY.jpg" class="profilepic">
+</div>
    <div class="profileinfo">
     <div class="profileinfocontent"> 
    <ul>
@@ -15,7 +15,7 @@
        </div>
        </div>
     <div>
-       <form class="form-inline my-2 my-lg-0 col-md-1" id="searchfavorbar">
+       <form id="searchfavorbar">
       <input class="form-control mr-sm-2" id="needquickfvtxt" type="search" placeholder="Need a quick favor?" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Create</button>
     </form>

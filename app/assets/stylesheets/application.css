@@ -14,7 +14,6 @@
  *= require_self
  */
 
-
  html {
    height: 100vh;
  }
@@ -75,4 +74,14 @@ nav.navbar {
     margin: 1px;
     border: 1px;
     border-color: #00ff99;
+}
+@media screen and (max-width: 400px){
+  .container {
+    margin: 5px;
+  }
+  img.app-body {
+   visibility:hidden;
+   height: 0%
+  }
+  
 }
