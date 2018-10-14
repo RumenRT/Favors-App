@@ -27,7 +27,7 @@
       <th scope="col" >Date</th>
       <th scope="col" class="favorassist">Category</th>
       <th scope="col" class="favorassist">Description</th>
-      <th scope="col">Abandon</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -37,7 +37,7 @@
          <td><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
          <td> <%= favor.category%> </td>
          <td> <%= favor.description%> </td>
-            </tr>
+          </tr>
         <%end%>
   </tbody>
 </table>
@@ -51,6 +51,7 @@
         <th scope="col">Category</th>
         <th scope="col">Description</th>
         <th scope="col" id="locationtableyourfavs" > Location</th>
+        <th scop="col"> Delete </th>
       </tr>
      </thead>
   <tbody>
@@ -61,6 +62,7 @@
         <td scope="row"><%= favor.category %></td>
         <td scope="row"><%= favor.address %></td>
         <td scope="row"><%= favor.description %></td>
+        <td><%= link_to "delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'Are you sure' } , :class=> "btn btn-danger"%></td> 
       </tr>
     <% end %>
   </tbody>

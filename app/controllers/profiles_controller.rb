@@ -37,9 +37,13 @@ class ProfilesController < ApplicationController
     end 
 
     def delete 
+        
     end
 
     def destroy
+        Notification.where(:favor_id => params[:id]).destroy_all
+        Favor.find(params[:id]).delete  
+        redirect_to profiles_path, notice: 'Favor was deleted successfully'
     end 
 
     private 

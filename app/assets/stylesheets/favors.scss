@@ -11,6 +11,7 @@
     background-color: whitesmoke; 
 } 
 
+
 #lilchubber {
     width: 40vh;
 }
@@ -68,11 +69,18 @@ align-content: flex-end  ;
 #newfavcat {
     text-align: center;
 }
-p#categorypopup
+p#categorypopup{
+    color: darkblue;
+}
 p#popupaddress {
     margin: 0px 7px 0px 7px; 
     font-size-adjust: 60%;
 } 
+div.favorform {
+    width: auto;
+    height: 400px;
+    padding: 25px 30px 0px 15px;
+}
 div.mapboxgl-popup-content {
     border-radius: 7px;
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
@@ -133,7 +141,8 @@ button.mapboxgl-popup-close-button {
 .favorform {
     width: 40%;
     border-radius:5px;
-   border: 2px double turquoise;
+//    border: 2px double turquoise;
+   height: 100%;
     text-align: right;
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
 }
