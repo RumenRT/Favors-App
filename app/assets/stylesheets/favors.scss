@@ -52,9 +52,9 @@ align-content: flex-end  ;
     border: solid 5px turquoise;
 }
 #newfavortitle {
-    margin: 3px;
+    margin: 0px 0px 12px 0px;
     padding: 8px 5px;
-    border-radius: 16px;
+    border-radius: 0% 0% 43% 43%;
     text-align: center;
     font-family: 'proxima-nova,helvetica,arial,sans-serif!important;';
     background-color: teal;
@@ -179,4 +179,4 @@ form {
     border-radius: 5px;
     border: 2px solid turquoise;
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
-}
+}}

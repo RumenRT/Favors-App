@@ -23,6 +23,9 @@
   background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
  }
  
+ img.app-body {
+   float: left;
+ }
 
 #link_id {
   text-decoration: none;

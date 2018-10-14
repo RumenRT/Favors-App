@@ -48,21 +48,24 @@
 h1#nameprofile {
     text-shadow: 2px 2px black;
     justify-content: inherit;
-    margin: 3px 1rem 20px 1rem;
+    margin: 0px 0rem 20px 0rem;
     padding: 8px 5px;
-    border-radius: 16px; ;
+    border-radius: 0% 0% 43% 43%;
 }
 #nameprofile {
     margin: 2px;
     text-align: center;
     background-color: teal;
-    border-radius: 8px;
+    border-radius: 0% 0% 43% 43%;
     box-sizing: content-box;
 }
-tr.favorsassist {
+tr.favorassist {
+    justify-content: center;
     text-align:center;
     font-size:13px;
     text-shadow: 2px;
+    font-style: italic;
+    text-decoration: underline;
     text-transform:uppercase;
 }
 #mainprofile { 
