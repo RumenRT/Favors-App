@@ -1,11 +1,12 @@
-<div class="justabackground">
-<div class="showmedafava">
-<h1>Owner</h1>
-    <h2 class="capitalizeme"><%= @favor.user.profile.name %></h2>
+<div className="card">
+<div class="card-body">
+
 <h1>Description</h1>
     <h2><%= @favor.description %></h2>
 <h1>Category</h1>
-    <h2><%= @favor.category %></h2>
+    <h2 style="display: inline"><p class='<%= @favor.category %>'></p><%= @favor.category %></h2>
+<h1>Owner</h1>
+    <h2 class="capitalizeme"><%= @favor.user.profile.name %></h2>
 <h1>Address</h1>
     <h2><%= @favor.address %></h2>
 <h1>Created at</h1>

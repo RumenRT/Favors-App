@@ -20,13 +20,13 @@
     </div>
   </div>
 <div id="favorlist">
-<h4 style=>Favors you're assisting with</h4>
-<table class="table">
+<h4 style="text-decoration: underline">Favors you're assisting with</h4>
+<table class="table table-hover">
   <thead>
      <tr class="favorassist">
-      <th scope="col" >Date</th>
-      <th scope="col" class="favorassist">Category</th>
-      <th scope="col" class="favorassist">Description</th>
+      <th scope="col" > <div class="text-align-center">Date</div></th>
+      <th scope="col" class="favorassist"><div class="text-align-center">Category</div></th>
+      <th scope="col" class="favorassist"><div class="text-align-center">Description</th>
       <th scope="col">Delete</th>
     </tr>
   </thead>
@@ -35,34 +35,38 @@
     <tr>  
         <% @performer_favors.each do |favor| %>
          <td><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
-         <td> <%= favor.category%> </td>
+         <td><p class='<%=favor.category%>'></p> </td>
          <td> <%= favor.description%> </td>
           </tr>
         <%end%>
   </tbody>
 </table>
 </div>
-<div id="favorlist">
+<div id="favorlist" text-align: center">
     <h4> Your Favors-List </h4>
-  <table class="table">
+  <table class="table table-hover">
      <thead>
-     <tr>
-        <th scope="col">Date</th>
-        <th scope="col">Category</th>
-        <th scope="col">Description</th>
+ 
+     <tr style="text-decoration: underline, color: darkgoldenrod">
+        <th class="text-align-center" scope="col"><div class="text-align-center">Date </div></th>
+        <th class="text-align-center" scope="col">Category</th>
+        <th scope="col"><div class="text-align-center">Description</div></th>
         <th scope="col" id="locationtableyourfavs" > Location</th>
         <th scop="col"> Delete </th>
+        <th scop="col"> Complete </th>
       </tr>
+     
      </thead>
   <tbody>
   <%# Code that loops all each user's favors and populates each with the defined categories  %>
     <% @favors.each do |favor|%>
       <tr>
         <td scope="row"><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
-        <td scope="row"><%= favor.category %></td>
+        <td><p class='<%=favor.category%>'></p> </td>
         <td scope="row"><%= favor.address %></td>
         <td scope="row"><%= favor.description %></td>
-        <td><%= link_to "delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'Are you sure' } , :class=> "btn btn-danger"%></td> 
+        <td><%= link_to "delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'You are about to delete this favor, are you sure?' } , :class=> "btn btn-danger"%></td> \
+        <td><%= link_to "complete", profile_path(:id => favor.id), method: :update, data: { confirm: 'Mark favor as completed?' } , :class=> "btn btn-danger"%></td> 
       </tr>
     <% end %>
   </tbody>
