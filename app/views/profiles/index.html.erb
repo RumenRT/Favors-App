@@ -26,25 +26,23 @@
 <table class="table">
   <thead>
      <tr class="favorassist">
+
       <th scope="col" class="favorassistt">Date</th>
       <th scope="col" class="favorassistt">Category</th>
       <th scope="col" class="favorassistt">Description</th>
       <th scope="col" class="favorassistt">Abandon</th>
+
     </tr>
   </thead>
   <tbody>
   <%# Code that loops all each user's favors and populates each with the defined categories  %>
-    <tr>
-    <% @favors.each do |favor|%>
-      
+    <tr>  
         <% @performer_favors.each do |favor| %>
          <td><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
          <td> <%= favor.category%> </td>
          <td> <%= favor.description%> </td>
-            </tr>
+          </tr>
         <%end%>
-   
-    <% end %>
   </tbody>
 </table>
 </div>
@@ -53,9 +51,14 @@
   <table class="table">
      <thead>
      <tr>
+
         <th scope="col" class="favorassistt">Date</th>
         <th scope="col" class="favorassistt">Category</th>
         <th scope="col" id="locationtableyourfavs" class="favorassistt"> Location</th>
+        <th scope="col">Description</th>
+        <th scope="col" id="locationtableyourfavs" > Location</th>
+        <th scop="col"> Delete </th>
+
       </tr>
      </thead>
   <tbody>
@@ -63,8 +66,10 @@
     <% @favors.each do |favor|%>
       <tr>
         <td scope="row"><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
-        <td><%= favor.category %></td>
-        <td><%= favor.address %></td>
+        <td scope="row"><%= favor.category %></td>
+        <td scope="row"><%= favor.address %></td>
+        <td scope="row"><%= favor.description %></td>
+        <td><%= link_to "delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'Are you sure' } , :class=> "btn btn-danger"%></td> 
       </tr>
     <% end %>
   </tbody>
