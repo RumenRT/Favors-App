@@ -5,17 +5,52 @@
     font-family: 'Droid Sans Mono';
     font-weight: bolder;
 }
-
-
+.profiletext {
+    font-size: large;
+    font-weight: bolder;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: right;
+    min-width: 300px;
+    padding: 5px 0;
+    margin: 10px;
+    font-size: 11px;
+    text-align: left;
+    background-color: ghostwhite;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 15px;
+}
 #navbarprof {
     text-align: center;
 
 }
-#profileinfo {
+
+// .profileinfo {
+     
+//     justify-content:center;
+   
+// }
+
+.profileinfocontent {
+    width: 30%;
+    // box-shadow: 7px 7px teal;
     justify-content: center
 }
+
 h1#nameprofile {
-    margin: 0px 50px 20px 50px ;
+    text-shadow: 2px 2px black;
+    justify-content: inherit;
+    margin: 3px 1rem 20px 1rem;
+    padding: 8px 5px;
+    border-radius: 16px; ;
 }
 #nameprofile {
     margin: 2px;
@@ -24,8 +59,14 @@ h1#nameprofile {
     border-radius: 8px;
     box-sizing: content-box;
 }
-
-#mainprofile {
+tr.favorsassist {
+    text-align:center;
+    font-size:13px;
+    text-shadow: 2px;
+    text-transform:uppercase;
+}
+#mainprofile { 
+    box-shadow: 0 0 1em 1em #ccc;
     width: auto;
     margin: 5px 40px ;
     display: flex;
@@ -81,10 +122,17 @@ h1#nameprofile {
     background-color: rgb(21, 184, 184);
 }
 
-#searchfavor {
+.needquickfvtxt {
+    width: 100px;
+}
+#searchfavorbar {
+    margin: 0px 60px 0px 60px;
+    justify-content: center;
     padding: 10px;
     text-align: center;
     width:  auto;
+    height: auto;
+    background-color: turquoise;
 }
 
 .table {

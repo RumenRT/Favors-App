@@ -1,10 +1,13 @@
 <div class="justabackground">
+<div class="showmedafava">
+<h1>Owner</h1>
+    <h2 class="capitalizeme"><%= @favor.user.profile.name %></h2>
 <h1>Description</h1>
     <h2><%= @favor.description %></h2>
-<h1>Address</h1>
-    <h2><%= @favor.address %></h2>
 <h1>Category</h1>
     <h2><%= @favor.category %></h2>
+<h1>Address</h1>
+    <h2><%= @favor.address %></h2>
 <h1>Created at</h1>
     <h2><%= @favor.created_at.to_date.strftime("%-m/%-d/%Y") %></h2>
     <%if @favor.performer %>
@@ -20,6 +23,6 @@
         <% end %>
     <% end %>
 </div>
-
+</div>
 
 

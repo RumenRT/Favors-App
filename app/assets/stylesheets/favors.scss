@@ -34,13 +34,19 @@
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
 }
 
+
+
 #maptitle {
+   
     text-align: center;
     font-style: bold;
     padding: 10px;
-  margin-bottom: 200vh;
+    padding-bottom:300vw;
     background-color: teal;
+}
 
+#titleboxmap {
+align-content: flex-end  ;
 }
 #newfavorcomplete {
     border: solid 5px turquoise;
@@ -48,9 +54,9 @@
 #newfavortitle {
     margin: 3px;
     padding: 8px 5px;
-    border-radius: 20px;
+    border-radius: 16px;
     text-align: center;
-    font-family: 'Droid Sans Mono';
+    font-family: 'proxima-nova,helvetica,arial,sans-serif!important;';
     background-color: teal;
    
 }
@@ -62,19 +68,14 @@
 #newfavcat {
     text-align: center;
 }
-.map-popup {
-    font-family: 'Droid Sans Mono';
-    border: 1px beige;
-    background-color: whitesmoke;
-}
-#categorypopup {
-    text-align: center;
-    text-decoration: underline;
-    text-transform: capitalize;
-}
-    
-.mapboxgl-popup-content {
-    background-color: #a460ff;
+p#categorypopup
+p#popupaddress {
+    margin: 0px 7px 0px 7px; 
+    font-size-adjust: 60%;
+} 
+div.mapboxgl-popup-content {
+    border-radius: 7px;
+    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
     box-shadow: 5px 11px 2px rgba(0, 0, 0, 0.1);
 }
 // when width is under 768 {
@@ -92,6 +93,34 @@ h1 {margin: 0px;}
 
 }
 
+button.mapboxgl-popup-close-button {
+    position: fixed;
+    right: -5px;
+    top: -3px;
+    border: 0;
+    border-radius: 0 3px 0 0;
+    background-color: transparent
+}
+.map-popup {
+    text-transform: capitalize;
+    opacity: 0.95;
+    padding:4.6px;
+    font-family: 'Helvetica';
+    border: 2px teal;
+    border-radius: 4px;
+    background-color: whitesmoke;
+}
+#categoryaddress {
+    color: darkgray;
+    text-align: right;
+
+}
+#categorypopup {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+  
 
 .favortypes{
     position: absolute;
@@ -130,7 +159,22 @@ text-align: center;
     background: turquoise;
 
 }
-
+td.text-left {
+    text-align:center;
+    text-transform: capitalize;
+}
+th.text-left {
+    text-align:center;
+}
+.capitalizeme {
+    text-transform: capitalize;
+}
+.showmedafava {
+    margin: 10px 20px 10px 20px;
+    border: 2px solid turquoise;
+    border-radius: 7px;
+    
+}
 form {
     border-radius: 5px;
     border: 2px solid turquoise;
