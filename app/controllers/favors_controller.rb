@@ -59,6 +59,8 @@ class FavorsController < ApplicationController
   end
 
   def destroy
+    Favor.find(params[:id]).delete 
+    redirect_to profiles_path, notice: 'Favor was deleted successfully'
   end
 
   def update
@@ -66,7 +68,7 @@ class FavorsController < ApplicationController
     @favor.update(performer_id: current_user.id) if params[:performer_id]
     @favor.save
     Notification.create(user: @favor.user, performer_id: current_user.id, favor: @favor) if params[:performer_id]
-    redirect_to @favor
+    redirect_to profiles_path
   end 
 
   def show

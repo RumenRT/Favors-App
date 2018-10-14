@@ -1,11 +1,12 @@
+<div class="justabackgroundturq">
 <%= form_with url: favors_create_path,  scope: :post, remote: true do |form| %>
 
     <%= form.select(:category, Favor.categories.map{ |cat| cat }, {}, class: "custom-select" ) %>
 
-    <div>
+   <div>
         <%= form.label :use_current_location %>
         <%= form.check_box :use_current_location,  id: :favor_use_current_location  %>
-    </div>
+   </div>
     <div>
         <%= form.hidden_field :latitude, readonly: true %>
     </div>
@@ -32,10 +33,12 @@
         <%= form.label :description %>
         <%= form.text_field :description, class: "text_input" %>
     </div>
-    <div>
+    <br>
+    <div class="centerbox">
         <%= form.submit %>
     </div>
 <% end %>
+</div>
 
 <script type="text/javascript">
   $('#favor_use_current_location').on('click', function(){

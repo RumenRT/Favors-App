@@ -6,16 +6,19 @@
     font-weight: bolder;
 }
 
+
 #navbarprof {
     text-align: center;
 
 }
+#profileinfo {
+    justify-content: center
+}
 h1#nameprofile {
-    margin: 0;
+    margin: 0px 50px 20px 50px ;
 }
 #nameprofile {
     margin: 2px;
-
     text-align: center;
     background-color: teal;
     border-radius: 8px;
@@ -32,6 +35,7 @@ h1#nameprofile {
 }
 #listgroup {
     margin: 10px;
+    justify-content: inherit;
     text-align: center;
     padding: 10px;
     border-radius: 10px; 

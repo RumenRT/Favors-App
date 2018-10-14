@@ -1,15 +1,12 @@
 <div class="backgrdiv">
 
 <h1 id= "nameprofile"> <%= @profiles.first_name %>'s Profile</h1>
-  <div id="mainprofile">
-    <ul class="list-group" id="listgroup">
-    </div>
       <li class="list-group-item"><p>First Name:</p><%= @profiles.first_name %></li>
       <li class="list-group-item"><p>Age:</p><%= @profiles.age %></li>
       <li class="list-group-item"><p>Favors completed:</p><%= @profiles.favors_completed %></li>
       <li class="list-group-item"><p>Favors offered:</p><%= @profiles.favors_offered %></li>
-    </ul>
-     
+  </ul>
+    </div>
     <hr>
     <div>
        <form class="form-inline my-2 my-lg-0 col-md-1" id="searchfavor">
@@ -18,10 +15,31 @@
     </form>
     </div>
   </div>
-
-<%# <hr> %>
 <div id="favorlist">
-<h4> Your Open-Favors </h4>
+<h4 style=>Favors you're assisting with</h4>
+<table class="table">
+  <thead>
+     <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Category</th>
+      <th scope="col">Location</th>
+      <th scope="col">Abandon</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%# Code that loops all each user's favors and populates each with the defined categories  %>
+    <% @favors.each do |favor|%>
+      <tr>
+        <% @performer_favors.each do |favor| %>
+          <%= favor.description%>
+        <%end%>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<div id="favorlist">
+<h4> Your Favors-List </h4>
 
 <table class="table">
   <thead>
@@ -29,6 +47,7 @@
       <th scope="col">Date</th>
       <th scope="col">Category</th>
       <th scope="col">Location</th>
+      <th scope="col">Delete</th>
 
     </tr>
   </thead>
@@ -44,4 +63,5 @@
   </tbody>
 </table>
 </div>
+
 </div>

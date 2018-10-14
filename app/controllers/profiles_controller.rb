@@ -3,7 +3,8 @@ class ProfilesController < ApplicationController
 
     def index
         @profiles = current_user.profile
-        @favors = current_user.favors 
+        @favors = current_user.favors
+        @performer_favors = current_user.performing_favors 
     end
 
     def show
