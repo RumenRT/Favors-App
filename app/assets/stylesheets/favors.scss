@@ -82,11 +82,25 @@ h1 {margin: 0px;}
     position: absolute;
     right: 0;
     width: 250px;
-    height: 270px;   
+    height: 480px; 
+    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);  
 }
 
 .favorform {
     width: 30%;
     float: left;
     text-align: right;
+    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
+}
+#h11{
+text-align: center;
+}
+#h33{
+text-align: center;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }

@@ -1,13 +1,20 @@
-<div style="background-color: black;">
+<div style="background-color: rgb(21, 184, 184);">
 
-    <h1><%= @favor.description %></h1>
+    <h1 id="h11"><%= @favor.description %></h1>
 
     <%if @favor.performer %>
-        <h3><%= @favor.performer.profile.first_name %> is doing it!</h3>  
+        <h3 id="h33"><%= @favor.performer.profile.first_name %> is helping you!</h3>  
+        <div>
+
+        <img src="https://media1.tenor.com/images/addfb7eed47bf1413af33d672c06a288/tenor.gif?itemid=12349917" class="center">
+            
+        </div>
     <% else %>
+    <div class="center">
         <%= form_with(model: @favor) do |form| %>
             <%= hidden_field_tag "performer_id", current_user.id %>
             <%= form.submit "Claim favor" %>
+    </div>
         <% end %>
     <% end %>
 
