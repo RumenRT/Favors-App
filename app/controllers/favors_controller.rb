@@ -15,7 +15,7 @@ class FavorsController < ApplicationController
               @coordinates = [0.0, 0.0] if @coordinates.empty?
           end
           format.json do
-              @favors = Favor.all
+              @favors = Favor.where(performer_id: nil)
               render json:  {
                       type: "FeatureCollection",
                       features: @favors.map do |favor|
@@ -59,10 +59,8 @@ class FavorsController < ApplicationController
   end
 
   def destroy
-
     Favor.find(params[:id]).delete 
     redirect_to profiles_path, notice: 'Favor was deleted successfully'
-
   end
 
   def update
