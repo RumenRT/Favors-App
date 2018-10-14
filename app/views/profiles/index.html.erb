@@ -1,6 +1,9 @@
-<div >
+<div class="container">
 
 <h1 id= "nameprofile"> <%= @profiles.first_name %>'s Profile</h1>
+ <div>
+    <img src="http://i.imgur.com/CrOKjtY.jpg" class="profilepic">
+</div>
    <div class="profileinfo">
     <div class="profileinfocontent"> 
    <ul>
@@ -11,9 +14,8 @@
   </ul>
        </div>
        </div>
-    
     <div>
-       <form class="form-inline my-2 my-lg-0 col-md-1" id="searchfavorbar">
+       <form id="searchfavorbar">
       <input class="form-control mr-sm-2" id="needquickfvtxt" type="search" placeholder="Need a quick favor?" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Create</button>
     </form>
@@ -24,10 +26,12 @@
 <table class="table">
   <thead>
      <tr class="favorassist">
-      <th scope="col" >Date</th>
-      <th scope="col" class="favorassist">Category</th>
-      <th scope="col" class="favorassist">Description</th>
-      <th scope="col">Delete</th>
+
+      <th scope="col" class="favorassistt">Date</th>
+      <th scope="col" class="favorassistt">Category</th>
+      <th scope="col" class="favorassistt">Description</th>
+      <th scope="col" class="favorassistt">Abandon</th>
+
     </tr>
   </thead>
   <tbody>
@@ -47,11 +51,14 @@
   <table class="table">
      <thead>
      <tr>
-        <th scope="col">Date</th>
-        <th scope="col">Category</th>
+
+        <th scope="col" class="favorassistt">Date</th>
+        <th scope="col" class="favorassistt">Category</th>
+        <th scope="col" id="locationtableyourfavs" class="favorassistt"> Location</th>
         <th scope="col">Description</th>
         <th scope="col" id="locationtableyourfavs" > Location</th>
         <th scop="col"> Delete </th>
+
       </tr>
      </thead>
   <tbody>

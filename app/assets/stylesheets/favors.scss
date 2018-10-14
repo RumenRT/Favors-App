@@ -158,7 +158,7 @@ text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-
+}
 .justabackground {
    height: 100vh;
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
@@ -184,8 +184,21 @@ th.text-left {
     border-radius: 7px;
     
 }
-form {
+.form {
     border-radius: 5px;
     border: 2px solid turquoise;
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
-}}
+}
+@media screen and (max-width: 400px){
+    #lilchubber {
+     float: left;
+     margin-right: 10%;
+     padding-right: 0%;
+     border: 1px;
+     width: 187px;
+     font-size: 12px;
+    }
+    #postcategory {
+        background-color: aliceblue;
+    }
+}
