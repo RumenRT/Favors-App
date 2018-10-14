@@ -1,22 +1,19 @@
 <div class="backgrdiv">
-<div id="NewFavPageComp">
-<h1 id="newfavortitle"> New Favor</h1>
-<div>
-    <ul class="favortypes">
-        <hr>
+<div class="NewFavPageComp" >
+<span>
+<h1 id="newfavortitle"> What do you need help with? </h1>
+    <div>
+       <ul id="lilchubber">
             <h5>Types of Favors<h5>
-        <hr>
             <li><p>Lifting</p><p class="lifting"></p></li>
             <li><p>Company(Lonely, chit-chat, chat)</p><p class="companionship"></p></li>
             <li><p>Looking for(searching, trying to find)</p><p class="searching"></p></li>
             <li><p>Cleaning(Mowing, wash)</p><p class="cleaning"></p></li>
             <li><p>installation(Installing, Connecting)</p><p class="expertise"></p></li>
         </ul>
-    </div>
-    <div class="favorform">
+      </div>
+   <div class="favorform">
     <%= render 'form', favor: @favor %>
     </div>
-</div>
-
-</div>
+</span>
 </div>

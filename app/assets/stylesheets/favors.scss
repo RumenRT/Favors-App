@@ -11,12 +11,13 @@
     background-color: whitesmoke; 
 } 
 
+#lilchubber {
+    width: 40vh;
+}
 .field input {
     width: 100%;
 }
-h2 {
-    color: white;
-}
+
 #linkies {
     color: teal;
 }
@@ -29,7 +30,18 @@ h2 {
 #navbarmain {text-align: center;
 
     }
-    
+.favordisplayed {
+    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
+}
+
+#maptitle {
+    text-align: center;
+    font-style: bold;
+    padding: 10px;
+  margin-bottom: 200vh;
+    background-color: teal;
+
+}
 #newfavorcomplete {
     border: solid 5px turquoise;
 }
@@ -43,6 +55,8 @@ h2 {
    
 }
 #NewFavPageComp  {
+    display: inline-block;
+   
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
 }
 #newfavcat {
@@ -78,6 +92,7 @@ h1 {margin: 0px;}
 
 }
 
+
 .favortypes{
     position: absolute;
     right: 0;
@@ -86,7 +101,23 @@ h1 {margin: 0px;}
 }
 
 .favorform {
-    width: 30%;
-    float: left;
+    width: 40%;
+    border-radius:5px;
+   border: 2px double turquoise;
     text-align: right;
+}
+.justabackground {
+   height: 100vh;
+    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
+}
+
+.justabackgroundturq {
+    background: turquoise;
+
+}
+
+form {
+    border-radius: 5px;
+    border: 2px solid turquoise;
+    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
 }
