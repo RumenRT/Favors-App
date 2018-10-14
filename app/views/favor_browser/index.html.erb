@@ -1,24 +1,28 @@
-<h1 font-color="white" align="center" style="background-color: teal;" text-light>Favors Near You</h1>
+<div id="favrbrwsrfull">
+<div class="titledivbrwsr">
+<h1 id="nameprofile" font-color="white" align="center" style="background-color: teal;" text-light>Favors Near You</h1>
 
 <table id="backgrdivr" class="table table-striped" id="favorbrowser" >
 
-  <thead>
-    <tr>
+  <thead ></thead>
+    <tr background-color=teal>
       <th scope="col">#</th>
       <th scope="col" class="text-left">Category</th>
       <th scope="col" class="text-left">Details</th>
-      <th scope="col" class="text-left">UserID</th>
+      <th scope="col" class="text-left">Owner</th>
+      <th scope="col" class="text-left">Claim-It</th>
       <%# USER ID TO BE CHANGED TO USER's PROFILE's Name  %>
       <th scope="col" class="text-left">More Info</th>
     </tr>
   </thead>
+  <hr>
   <tbody>
   <% @favors.each.with_index do |favor, index| %>
     <tr>
       <th scope="row"> <%= index + 1 %></th>
       <td class="text-left"><%= favor.category %></td>
       <td class="text-left"><%= favor.description %></td>
-      <td class="text-left"><%= favor.user_id %>
+      <td class="text-left"><%= favor.user.profile.name %>
       <td class="text-left"><%= link_to 'Claim',favor_claim_path(favor_id: favor.id, user_id: current_user.id), class: 'btn btn-warning' %></td>
       <td class="text-left"><%= link_to 'Open', favor_path(favor.id), class: 'btn btn-primary' %></td>
       <%# <a class="btn btn-primary" href="/favors">map</a> %>
@@ -27,5 +31,6 @@
     <% end %>
   </tbody>
 </table>
-
 </div>
+</div>
+<hr>
