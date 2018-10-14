@@ -1,6 +1,9 @@
-<div >
+<div class="container">
 
 <h1 id= "nameprofile"> <%= @profiles.first_name %>'s Profile</h1>
+ <div>
+    <img src="http://i.imgur.com/CrOKjtY.jpg" class="profilepic">
+</div>
    <div class="profileinfo">
     <div class="profileinfocontent"> 
    <ul>
@@ -11,9 +14,8 @@
   </ul>
        </div>
        </div>
-    
     <div>
-       <form class="form-inline my-2 my-lg-0 col-md-1" id="searchfavorbar">
+       <form id="searchfavorbar">
       <input class="form-control mr-sm-2" id="needquickfvtxt" type="search" placeholder="Need a quick favor?" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Create</button>
     </form>
@@ -23,11 +25,12 @@
 <h4 style="text-decoration: underline">Favors you're assisting with</h4>
 <table class="table table-hover">
   <thead>
-     <tr class="favorassist">
-      <th scope="col" > <div class="text-align-center">Date</div></th>
-      <th scope="col" class="favorassist"><div class="text-align-center">Category</div></th>
-      <th scope="col" class="favorassist"><div class="text-align-center">Description</th>
-      <th scope="col">Delete</th>
+     <tr class="favorassist">       
+      <th scope="col" class="favorassistt"><div class="text-align-center">Date</div></th>
+      <th scope="col" class="favorassistt"><div class="text-align-center">Category</div></th>
+      <th scope="col" class="favorassistt"><div class="text-align-center">Description</th>
+      <th scope="col" class="favorassistt">Abandon</th>
+
     </tr>
   </thead>
   <tbody>
@@ -46,7 +49,7 @@
     <h4> Your Favors-List </h4>
   <table class="table table-hover">
      <thead>
- 
+
      <tr style="text-decoration: underline, color: darkgoldenrod">
         <th class="text-align-center" scope="col"><div class="text-align-center">Date </div></th>
         <th class="text-align-center" scope="col">Category</th>
@@ -54,6 +57,7 @@
         <th scope="col" id="locationtableyourfavs" > Location</th>
         <th scop="col"> Delete </th>
         <th scop="col"> Complete </th>
+
       </tr>
      
      </thead>
