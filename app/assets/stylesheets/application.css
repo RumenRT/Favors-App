@@ -26,7 +26,9 @@
 * {
   font-family: 'Montserrat'
 }
- 
+div#fulllogin.row {
+  background-color: transparent;
+}
 .pagemaintitle {
   text-shadow: 2px 2px black;
   text-align: center;
@@ -54,6 +56,7 @@
 .mainlogin {
   background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
   text-align: center;
+
 }
 .mainlogin h2{
   color: teal;
