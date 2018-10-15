@@ -4,6 +4,7 @@ class ProfilesController < ApplicationController
     def index
         @profiles = current_user.profile
         @favors = current_user.favors
+        @approved_favor_count = @favors.completed.count
         @performer_favors = current_user.performing_favors 
     end
 
@@ -44,9 +45,13 @@ class ProfilesController < ApplicationController
 
     def check_box_completed
        @profile = Profile.where(:user_id => current_user.id).last
-       @profile.favors_completed = @profile.favors_completed.to_i + 1
        @favor = Favor.find(params[:favor_id])
+        
+       
+        
        @favor.completed = true
+       @favor.save
+       
        redirect_to profiles_path
     end
 

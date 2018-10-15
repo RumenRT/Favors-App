@@ -6,7 +6,7 @@
     <ul>
         <li class="list-group-item"><p class="profiletext">Name:</p><%= @profiles.name %></li>
         <li class="list-group-item"><p class="profiletext">Age:</p><%= @profiles.age %></li>
-        <li class="list-group-item"><p>Favors completed:</p><%=  @profiles %></li>
+        <li class="list-group-item"><p>Favors completed:</p><%=  @approved_favor_count %></li>
         <li class="list-group-item"><p>Favors offered:</p><%= @profiles.favors_offered %></li>
     </ul>
     </div>
@@ -62,10 +62,11 @@
         <td scope="row"><%= favor.address %></td>
         <td scope="row"><%= favor.description %></td>
          <td>
-         <%= form_tag  checkbox_path  %>
-         <%= hidden_field_tag :favor_id,  favor.id %>
-         <%= hidden_field_tag  :completed, true %>
-         <%= submit_tag "Completed" %>
+          <%= form_tag  checkbox_path do %>
+              <%= hidden_field_tag :favor_id,  favor.id %>
+              <%= hidden_field_tag  :completed, true %>
+              <%= submit_tag "Completed" %>
+          <% end %>
          </td>
       </tr>
     <% end %>

@@ -13,6 +13,7 @@ class Favor < ApplicationRecord
     belongs_to :performer, class_name: "User", optional: true
     has_many :notifications
 
+    scope :completed, -> { where(completed: true) }
     scope :with_new_notifications, -> { joins(:notifications).where("notifications.created_at > ?", 1.day.ago ) }
 
     def address 
