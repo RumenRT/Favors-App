@@ -10,8 +10,21 @@
     border: solid 4px turquoise; 
     background-color: whitesmoke; 
 } 
-
-
+label {
+    margin: 8px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+ul.card.mr-auto {
+    list-style: none;
+    text-align:left;
+    font-size: 13px;
+    margin: 17px 2px 5px 2px;
+    padding: 0px;
+}
+.lifting p{
+    text-align: right;
+}
 #lilchubber {
     width: 40vh;
 }
@@ -19,6 +32,11 @@
     width: 100%;
 }
 
+.custom-select {
+    margin-top: -157px;
+    text-transform: capitalize;
+    background-color: whitesmoke;
+}
 #linkies {
     color: teal;
 }
@@ -52,12 +70,15 @@ align-content: flex-end  ;
 #newfavorcomplete {
     border: solid 5px turquoise;
 }
+
 #newfavortitle {
-    margin: 0px 0px 12px 0px;
-    padding: 8px 5px;
-    border-radius: 0% 0% 43% 43%;
+    text-shadow: 2px 2px black;
     text-align: center;
-    font-family: 'proxima-nova,helvetica,arial,sans-serif!important;';
+    margin: 0px 0rem 0px 0rem;
+    padding: 0px 0px;
+    border-radius: 0% 0% 43% 43%;
+    
+    font-family: 'Montserrat';
     background-color: teal;
    
 }
@@ -76,10 +97,12 @@ p#popupaddress {
     margin: 0px 7px 0px 7px; 
     font-size-adjust: 60%;
 } 
-div.favorform {
+div.favorform {    
+    margin: 0px;
+    margin-bottom: auto;
     width: auto;
-    height: 400px;
-    padding: 25px 30px 0px 15px;
+    height: auto;
+    padding: 0px 14px 91px 0px;
 }
 div.mapboxgl-popup-content {
     border-radius: 7px;
@@ -128,10 +151,16 @@ button.mapboxgl-popup-close-button {
     text-decoration: underline;
     text-transform: capitalize;
 }
-  
-
+.iconsnewpage {
+    text-align:-webkit-left;
+}
+table {
+    margin: 0 auto;
+    position: static;
+    align-content: center;
+}
 .favortypes{
-    position: absolute;
+    position: static;
     right: 0;
     width: 250px;
     height: 480px; 
@@ -141,10 +170,9 @@ button.mapboxgl-popup-close-button {
 .favorform {
     width: 40%;
     border-radius:5px;
-//    border: 2px double turquoise;
    height: 100%;
     text-align: right;
-    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
+    background-color: transparent;
 }
 
 #h11{
@@ -179,8 +207,8 @@ th.text-left {
     text-transform: capitalize;
 }
 .showmedafava {
-    margin: 10px 20px 10px 20px;
-    border: 2px solid turquoise;
+    // margin: 10px 20px 10px 20px;
+   
     border-radius: 7px;
     
 }
@@ -189,3 +217,17 @@ form {
     border: 2px solid turquoise;
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
 }}
+
+@media screen and (max-width: 400px){
+    #lilchubber {
+     float: left;
+     margin-right: 10%;
+     padding-right: 0%;
+     border: 1px;
+     width: 187px;
+     font-size: 12px;
+    }
+    #postcategory {
+        background-color: aliceblue;
+    }
+} 

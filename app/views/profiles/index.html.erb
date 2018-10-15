@@ -1,33 +1,29 @@
 <div >
 
-<h1 id= "nameprofile"> <%= @profiles.first_name %>'s Profile</h1>
+<h1 class= "pagemaintitle"> <%= @profiles.first_name %>'s Profile</h1>
+
    <div class="profileinfo">
     <div class="profileinfocontent"> 
-   <ul>
+   <ul class= "card">
       <li class="list-group-item"><p class="profiletext">Name:</p><%= @profiles.name %></li>
       <li class="list-group-item"><p class="profiletext">Age:</p><%= @profiles.age %></li>
-      <li class="list-group-item"><p>Favors completed:</p><%= @profiles.favors_completed %></li>
-      <li class="list-group-item"><p>Favors offered:</p><%= @profiles.favors_offered %></li>
+      <li class="list-group-item"><p>Favors Given:</p><%= @profiles.favors_completed %></li>
+      <li class="list-group-item"><p>Favors Received:</p><%= @profiles.favors_offered %></li>
   </ul>
        </div>
        </div>
     
-    <div>
-       <form class="form-inline my-2 my-lg-0 col-md-1" id="searchfavorbar">
-      <input class="form-control mr-sm-2" id="needquickfvtxt" type="search" placeholder="Need a quick favor?" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Create</button>
-    </form>
-    </div>
+    
   </div>
-<div id="favorlist">
+<div class="favorlist">
 <h4 style=>Favors you're assisting with</h4>
-<table class="table">
+<table class="table table-hover">
   <thead>
      <tr class="favorassist">
       <th scope="col" >Date</th>
       <th scope="col" class="favorassist">Category</th>
       <th scope="col" class="favorassist">Description</th>
-      <th scope="col">Delete</th>
+      <th scope="col">   </th>
     </tr>
   </thead>
   <tbody>
@@ -35,18 +31,19 @@
     <tr>  
         <% @performer_favors.each do |favor| %>
          <td><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
-         <td> <%= favor.category%> </td>
+         <td><p class='<%=favor.category%>'></p> </td>
          <td> <%= favor.description%> </td>
+         <td><%= link_to "Abandon", profile_path(:id => favor.id), method: :delete, data: { confirm: 'Are you sure' } , :class=> "btn btn-danger"%></td>
           </tr>
         <%end%>
   </tbody>
 </table>
 </div>
-<div id="favorlist">
+<div class="favorlist">
     <h4> Your Favors-List </h4>
-  <table class="table">
+  <table class="table table-hover">
      <thead>
-     <tr>
+     <tr class="favorassist">
         <th scope="col">Date</th>
         <th scope="col">Category</th>
         <th scope="col">Description</th>
@@ -59,10 +56,11 @@
     <% @favors.each do |favor|%>
       <tr>
         <td scope="row"><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
-        <td scope="row"><%= favor.category %></td>
-        <td scope="row"><%= favor.address %></td>
+        <td><p class='<%=favor.category%>'></p> </td>
         <td scope="row"><%= favor.description %></td>
-        <td><%= link_to "delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'Are you sure' } , :class=> "btn btn-danger"%></td> 
+        <td scope="row"><%= favor.street %></td>
+        
+        <td><%= link_to "Delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'Are you sure' } , :class=> "btn btn-danger"%></td> 
       </tr>
     <% end %>
   </tbody>

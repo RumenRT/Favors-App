@@ -1,9 +1,11 @@
-// Place all the styles related to the Profiles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
  * {
-    font-family: 'Droid Sans Mono';
+    
     font-weight: bolder;
+}
+.card {
+    background-color: transparent;
+    border: 0px;
+
 }
 .profiletext {
     font-size: large;
@@ -20,37 +22,41 @@
     padding: 5px 0;
     margin: 10px;
     font-size: 11px;
+    list-style: none;
     text-align: left;
     background-color: ghostwhite;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #ccc;
     border: 1px solid rgba(0,0,0,.15);
-    border-radius: 15px;
+    border-radius: 10px;
 }
-#navbarprof {
-    text-align: center;
-
+div.favorlist {
+    margin: 5px;
 }
-
-// .profileinfo {
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+div.profileinfo {
      
-//     justify-content:center;
+    justify-content:center;
    
-// }
+}
 
-.profileinfocontent {
-    width: 30%;
+div.profileinfocontent {
+    width: 300px;
     // box-shadow: 7px 7px teal;
     justify-content: center
 }
 
-h1#nameprofile {
+h1.pagemaintitle {
     text-shadow: 2px 2px black;
     justify-content: inherit;
-    margin: 0px 0rem 20px 0rem;
-    padding: 8px 5px;
+    margin: 0px 0rem 15px 0rem;
+    padding: 0px 0px;
     border-radius: 0% 0% 43% 43%;
+    text-align: center;
 }
 #nameprofile {
     margin: 2px;
@@ -60,13 +66,12 @@ h1#nameprofile {
     box-sizing: content-box;
 }
 tr.favorassist {
+    color: saddlebrown;
     justify-content: center;
     text-align:center;
-    font-size:13px;
     text-shadow: 2px;
-    font-style: italic;
-    text-decoration: underline;
-    text-transform:uppercase;
+    font-style: bold;
+    text-transform:capitalize;
 }
 #mainprofile { 
     box-shadow: 0 0 1em 1em #ccc;
@@ -87,7 +92,7 @@ tr.favorassist {
 }
 
 
-#favorlist {
+.favorlist {
     box-shadow: 4px 7px teal;
     text-align: center;
     border-radius: 10px; 
@@ -98,10 +103,11 @@ tr.favorassist {
     box-sizing: content-box;
     background-color: whitesmoke;
 }
-#favorlist h4 {
-    font-family: 'Droid Sans Mono';
-    font-style: italic; 
-    color: blue }
+.favorlist h4 {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-style: bold; 
+    color: brown }
 #favorscompleted {
     box-shadow: 4px 7px teal;
     text-align: center;
@@ -112,11 +118,6 @@ tr.favorassist {
     margin: 10px 10px ;
     box-sizing: content-box;
     background-color: whitesmoke
-}
-#favorscompleted h4 {
-    font-family: 'Droid Sans Mono';
-    font-style: italic; 
-    color: blue 
 }
 
 .list-group-item {
@@ -148,4 +149,84 @@ tr.favorassist {
     padding-bottom: 0;
     height: 30px;
     align-items: center;
+}
+
+// MOBILE RESPONSIVENESS BELOW 
+
+
+@media screen and (max-width: 370px){
+    .list-group-item {
+        float: left;
+        margin-left: 1%;
+        width: 140%;
+        color: white;
+        background-color: rgb(21, 184, 184);
+    }
+    .profilepic {
+        float :right;
+        margin-right: 7%;
+        width:180px;
+        height:180px;
+        margin-top: 20px;
+    }
+    #searchfavorbar {
+        margin: 0px 10px 0px 10px;
+        justify-content: center;
+        padding: 10px;
+        text-align: center;
+        width:  auto;
+        height: auto;
+        background-color: turquoise;
+    }
+    .dropdown-menu {
+        float: left;
+    }
+    #dropdown-menu {
+        float: left;
+    }
+
+    /// FAVOR LIST STYLING BELOW
+
+    .text-align-center {
+        color: darkgoldenrod;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+    a.btn.btn-danger{
+        text-transform: capitalize;
+    }
+    #favorlist {
+        border-spacing: length;
+        box-shadow: 4px 7px teal;
+        text-align: justify;
+        border-radius: 10px; 
+        width:  center 300px;
+        border: 10px solid turquoise;
+        padding: 10px;
+        margin: 10px;
+        box-sizing: content-box;
+        background-color: whitesmoke;
+        font-size: 12px;
+    }
+    #favorlist h4 {
+        font-family: 'Montserrat';
+        font-style: bold; 
+        font-weight: bolder;
+        color: brown }
+
+    tr.favorassist {
+        justify-content: center;
+        text-align:center;
+        font-size:13px;
+        text-shadow: 2px;
+        
+        text-decoration: underline;
+       
+    }
+    // .favorassistt{
+    //     font-size: 12px;
+    //     padding: 1px, 1px, 1px, 1px;
+    //     text-align: center;
+    // }
 }
