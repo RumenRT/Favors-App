@@ -177,7 +177,7 @@ tr.favorassist {
     height:250px;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 400px){
     .list-group-item {
         float: left;
         margin-left: 1%;
@@ -188,8 +188,8 @@ tr.favorassist {
     .profilepic {
         float :right;
         margin-right: 7%;
-        width:280px;
-        height:280px;
+        width:180px;
+        height:180px;
         margin-top: 20px;
     }
     #searchfavorbar {
