@@ -14,3 +14,8 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(function () {
+    $('.mapboxgl-map').css('heigth', '100%')
+    console.log("wtf?")
+})
