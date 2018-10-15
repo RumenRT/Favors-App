@@ -46,12 +46,8 @@ class ProfilesController < ApplicationController
     def check_box_completed
        @profile = Profile.where(:user_id => current_user.id).last
        @favor = Favor.find(params[:favor_id])
-        
-       
-        
        @favor.completed = true
        @favor.save
-       
        redirect_to profiles_path
     end
 
