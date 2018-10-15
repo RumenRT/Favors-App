@@ -149,3 +149,80 @@ tr.favorassist {
     height: 30px;
     align-items: center;
 }
+
+// MOBILE RESPONSIVENESS BELOW 
+
+
+@media screen and (max-width: 400px){
+    .list-group-item {
+        float: left;
+        margin-left: 1%;
+        width: 140%;
+        color: white;
+        background-color: rgb(21, 184, 184);
+    }
+    .profilepic {
+        float :right;
+        margin-right: 7%;
+        width:180px;
+        height:180px;
+        margin-top: 20px;
+    }
+    #searchfavorbar {
+        margin: 0px 10px 0px 10px;
+        justify-content: center;
+        padding: 10px;
+        text-align: center;
+        width:  auto;
+        height: auto;
+        background-color: turquoise;
+    }
+    .dropdown-menu {
+        float: left;
+    }
+    #dropdown-menu {
+        float: left;
+    }
+
+    /// FAVOR LIST STYLING BELOW
+
+    .text-align-center {
+        color: darkgoldenrod;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+    #favorlist {
+        box-shadow: 4px 7px teal;
+        text-align: justify;
+        border-radius: 10px; 
+        width:  center 300px;
+        border: 10px solid turquoise;
+        padding: 10px;
+        margin: 10px;
+        box-sizing: content-box;
+        background-color: whitesmoke;
+        font-size: 12px;
+    }
+    #favorlist h4 {font-family: 'Droid Sans Mono';
+      
+        
+        font-style: bold; 
+        font-weight: bolder;
+        color: brown }
+
+    tr.favorassist {
+        justify-content: center;
+        text-align:center;
+        font-size:13px;
+        text-shadow: 2px;
+        font-style: italic;
+        text-decoration: underline;
+        text-transform:uppercase;
+    }
+    .favorassistt{
+        font-size: 12px;
+        padding: 1px, 1px, 1px, 1px;
+        text-align: center;
+    }
+}

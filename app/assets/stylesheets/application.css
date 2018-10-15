@@ -18,12 +18,18 @@
  html {
    height: 100vh;
  }
- 
+ a.nav-item {
+   color: white;
+   margin: 3px 5px 2px 5px ;
+   padding: 5px;  
+}
+
  .app-body {
   background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
  }
  
  img.app-body {
+   border: 0px;
    float: left;
  }
 
@@ -39,6 +45,9 @@
   text-align: center;
 }
 
+.navitem {
+  padding: 5px;
+}
 nav.navbar {
   margin-bottom: 0
 }

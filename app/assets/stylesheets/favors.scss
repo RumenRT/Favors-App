@@ -53,11 +53,11 @@ align-content: flex-end  ;
     border: solid 5px turquoise;
 }
 #newfavortitle {
-    margin: 0px 0px 12px 0px;
+    margin: 0px 0px 0px 0px;
     padding: 8px 5px;
     border-radius: 0% 0% 43% 43%;
     text-align: center;
-    font-family: 'proxima-nova,helvetica,arial,sans-serif!important;';
+    font-family: 'proxima-nova,helvetica,arial,sans-serif';
     background-color: teal;
    
 }
@@ -189,3 +189,17 @@ form {
     border: 2px solid turquoise;
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
 }}
+
+@media screen and (max-width: 400px){
+    #lilchubber {
+     float: left;
+     margin-right: 10%;
+     padding-right: 0%;
+     border: 1px;
+     width: 187px;
+     font-size: 12px;
+    }
+    #postcategory {
+        background-color: aliceblue;
+    }
+} 

@@ -20,9 +20,9 @@
   <% @favors.each.with_index do |favor, index| %>
     <tr>
       <th scope="row"> <%= index + 1 %></th>
-      <td class="text-left"><%= favor.category %></td>
+      <td><p class='<%=favor.category%>'></p> </td>
       <td class="text-left"><%= favor.description %></td>
-      <td class="text-left"><%= favor.user.profile.name %>
+      <td style="text-transform: capitalize" class="text-left"><%= favor.user.profile.name %>
       <td class="text-left"><%= link_to 'Claim',favor_claim_path(favor_id: favor.id, user_id: current_user.id), class: 'btn btn-warning' %></td>
       <td class="text-left"><%= link_to 'Open', favor_path(favor.id), class: 'btn btn-primary' %></td>
       <%# <a class="btn btn-primary" href="/favors">map</a> %>
