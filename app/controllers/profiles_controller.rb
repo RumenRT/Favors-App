@@ -49,9 +49,17 @@ class ProfilesController < ApplicationController
         redirect_to profiles_path, notice: 'Favor was deleted successfully'
     end 
 
+    def check_box_completed
+       @profile = Profile.where(:user_id => current_user.id).last
+       @profile.favors_completed = @profile.favors_completed.to_i + 1
+       @favor = Favor.find(params[:favor_id])
+       @favor.completed = true
+       redirect_to profiles_path
+    end
+
     private 
 
     def profile_params
-        params.require(:profile).permit(:first_name, :last_name, :age, :favors_completed, :favors_offered)
+        params.require(:profile).permit(:first_name, :last_name, :age, :favors_completed, :favors_offered, :favor_id)
     end 
 end

@@ -1,24 +1,27 @@
 <div class="container">
 
 <h1 id= "nameprofile"> <%= @profiles.first_name %>'s Profile</h1>
- <div>
+
+<div>
     <img src="http://i.imgur.com/CrOKjtY.jpg" class="profilepic">
 </div>
-   <div class="profileinfo">
-    <div class="profileinfocontent"> 
-   <ul>
-      <li class="list-group-item"><p class="profiletext">Name:</p><%= @profiles.name %></li>
-      <li class="list-group-item"><p class="profiletext">Age:</p><%= @profiles.age %></li>
-      <li class="list-group-item"><p>Favors completed:</p><%= @profiles.favors_completed %></li>
-      <li class="list-group-item"><p>Favors offered:</p><%= @profiles.favors_offered %></li>
-  </ul>
-       </div>
-       </div>
-    <div>
-       <form id="searchfavorbar">
+  <div class="profileinfo">
+   <div class="profileinfocontent"> 
+    <ul>
+        <li class="list-group-item"><p class="profiletext">Name:</p><%= @profiles.name %></li>
+        <li class="list-group-item"><p class="profiletext">Age:</p><%= @profiles.age %></li>
+        <li class="list-group-item"><p>Favors completed:</p><%= @profile %></li>
+        <li class="list-group-item"><p>Favors offered:</p><%= @profiles.favors_offered %></li>
+    </ul>
+    </div>
+  </div>
+    
+  <div>
+      <form class="form-inline my-2 my-lg-0 col-md-1" id="searchfavorbar">
+
       <input class="form-control mr-sm-2" id="needquickfvtxt" type="search" placeholder="Need a quick favor?" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Create</button>
-    </form>
+      </form>
     </div>
   </div>
 <div id="favorlist">
@@ -38,9 +41,10 @@
     <tr>  
         <% @performer_favors.each do |favor| %>
          <td><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
+
          <td><p class='<%=favor.category%>'></p> </td>
          <td> <%= favor.description%> </td>
-          </tr>
+    </tr>
         <%end%>
   </tbody>
 </table>
@@ -69,8 +73,17 @@
         <td><p class='<%=favor.category%>'></p> </td>
         <td scope="row"><%= favor.address %></td>
         <td scope="row"><%= favor.description %></td>
+
+         <td>
+         <%= form_tag  checkbox_path  %>
+         <%= hidden_field_tag :favor_id,  favor.id %>
+         <%= hidden_field_tag  :completed, true %>
+         <%= submit_tag "Completed" %>
+         </td>
+
         <td><%= link_to "delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'You are about to delete this favor, are you sure?' } , :class=> "btn btn-danger"%></td> \
-        <td><%= link_to "complete", profile_path(:id => favor.id), method: :update, data: { confirm: 'Mark favor as completed?' } , :class=> "btn btn-danger"%></td> 
+      
+
       </tr>
     <% end %>
   </tbody>
