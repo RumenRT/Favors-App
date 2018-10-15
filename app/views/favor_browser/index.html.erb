@@ -1,36 +1,36 @@
 <div id="favrbrwsrfull">
 <div class="titledivbrwsr">
-<h1 id="nameprofile" font-color="white" align="center" style="background-color: teal;" text-light>Favors Near You</h1>
+<h1 class="pagemaintitle" font-color="white" align="center" style="background-color: teal;" text-light>Favors Near You</h1>
+<div class="container">
+  <table class="table table-striped table-hover" id="favorbrowser" >
 
-<table id="backgrdivr" class="table table-striped" id="favorbrowser" >
+    <thead >
+      <tr background-color=teal>
+        <th scope="col">#</th>
+        <th scope="col" class="text-left">Category</th>
+        <th scope="col" class="text-left">Description</th>
+        <th scope="col" class="text-left" class="favrbrwsrtitles">Owner</th>
+        <th scope="col" class="text-left"> </th>
+        <%# USER ID TO BE CHANGED TO USER's PROFILE's Name  %>
+        <th scope="col" class="text-left">   </th>
+      </tr>
+    </thead>
+    <br>
+    <tbody>
+    <% @favors.each.with_index do |favor, index| %>
+      <tr>
+        <th scope="row"> <%= index + 1 %></th>
+        <td><p class='<%=favor.category%>'></p> </td>
+        <td class="text-left"><%= favor.description %></td>
+        <td style="text-transform: capitalize" class="text-left"><%= favor.user.profile.name %>
+        <td class="text-left"><%= link_to 'Claim',favor_claim_path(favor_id: favor.id, user_id: current_user.id), class: 'btn btn-warning' %></td>
+        <td class="text-left"><%= link_to 'Info', favor_path(favor.id), class: 'btn btn-light' %></td>
+      </tr>
 
-  <thead ></thead>
-    <tr style="text-transform: underline" >
-      <th scope="col">#</th>
-      <th scope="col" class="text-left">Category</th>
-      <th scope="col" class="text-left">Description</th>
-      <th scope="col" class="text-left" class="favrbrwsrtitles">Owner</th>
-      <th scope="col" class="text-left">Claim-It</th>
-      <%# USER ID TO BE CHANGED TO USER's PROFILE's Name  %>
-      <th scope="col" class="text-left">More Info</th>
-    </tr>
-  </thead>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+  </div>
   <br>
-  <tbody>
-  <% @favors.each.with_index do |favor, index| %>
-    <tr>
-      <th scope="row"> <%= index + 1 %></th>
-      <td class="text-left"><div class="text-align-center"><p class='<%=favor.category%>'></p></div> </td>
-      <td class="text-left"><%= favor.description %></td>
-      <td style="text-transform: capitalize" class="text-left"><%= favor.user.profile.name %>
-      <td class="text-left"><%= link_to 'Claim',favor_claim_path(favor_id: favor.id, user_id: current_user.id), class: 'btn btn-warning' %></td>
-      <td class="text-left"><%= link_to 'Open', favor_path(favor.id), class: 'btn btn-primary' %></td>
-      <%# <a class="btn btn-primary" href="/favors">map</a> %>
-    </tr>
-
-    <% end %>
-  </tbody>
-</table>
 </div>
-</div>
-<br>

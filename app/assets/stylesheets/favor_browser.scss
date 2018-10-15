@@ -2,13 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+a.btn.btn-warning {
+    font-weight: bolder;
+}
+a.btn.btn-light {
+    font-weight: bolder;
+}
+#favrbrwsrfull {
+    width: 100%;
+}
+
+
 #favorbrowser {
    
     margin: 10px;
     text-align: center;
     padding: 10px;
     border-radius: 5px; 
-    background-color: rgb(21, 184, 184);
+    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
     margin-right: 10px;
 }
 #backgrdivr {
@@ -21,8 +32,24 @@
     text-transform: capitalize;
 
 }
+.pagemaintitle
+{
+    text-shadow: 2px 2px black;
+    justify-content: inherit;
+    margin: 0px 0rem 20px 0rem;
+    padding: 8px 5px;
+    border-radius: 0% 0% 43% 43%;
+}
+thead {
+    line-height: 1.4;
+}
 td.text-left-title {
     text-transform: capitalize;
+}
+table#backgrdivr {
+    margin: 0 auto;
+    position: static;
+    align-content: center;
 }
 @media screen and (max-width: 400px){
     #favorbrowser {

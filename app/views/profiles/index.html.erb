@@ -1,39 +1,32 @@
-<div class="container">
+<div >
 
-<h1 id= "nameprofile"> <%= @profiles.first_name %>'s Profile</h1>
+<h1 class= "pagemaintitle"> <%= @profiles.first_name %>'s Profile</h1>
 
 <div>
     <img src="http://i.imgur.com/CrOKjtY.jpg" class="profilepic">
 </div>
   <div class="profileinfo">
    <div class="profileinfocontent"> 
-    <ul>
+     <ul class= "card">
         <li class="list-group-item"><p class="profiletext">Name:</p><%= @profiles.name %></li>
         <li class="list-group-item"><p class="profiletext">Age:</p><%= @profiles.age %></li>
-        <li class="list-group-item"><p>Favors completed:</p><%=  @approved_favor_count %></li>
-        <li class="list-group-item"><p>Favors offered:</p><%= @profiles.favors_offered %></li>
+        <li class="list-group-item"><p>Favors Given:</p><%=  @approved_favor_count %></li>
+        <li class="list-group-item"><p>Favors Received:</p><%= @profiles.favors_offered %></li>
     </ul>
     </div>
   </div>
-    
-  <div>
-      <form class="form-inline my-2 my-lg-0 col-md-1" id="searchfavorbar">
 
-      <input class="form-control mr-sm-2" id="needquickfvtxt" type="search" placeholder="Need a quick favor?" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Create</button>
-      </form>
-    </div>
+    
   </div>
-<div id="favorlist">
-<h4 style="text-decoration: underline">Favors you're assisting with</h4>
+<div class="favorlist">
+<h4 style=>Favors you're assisting with</h4>
 <table class="table table-hover">
   <thead>
-     <tr class="favorassist">       
-      <th scope="col" class="favorassistt"><div class="text-align-center">Date</div></th>
-      <th scope="col" class="favorassistt"><div class="text-align-center">Category</div></th>
-      <th scope="col" class="favorassistt"><div class="text-align-center">Description</th>
-      <th scope="col" class="favorassistt">Abandon</th>
-
+     <tr class="favorassist">
+      <th scope="col" >Date</th>
+      <th scope="col" class="favorassist">Category</th>
+      <th scope="col" class="favorassist">Description</th>
+      <th scope="col">   </th>
     </tr>
   </thead>
   <tbody>
@@ -41,29 +34,25 @@
     <tr>  
         <% @performer_favors.each do |favor| %>
          <td><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
-
          <td><p class='<%=favor.category%>'></p> </td>
          <td> <%= favor.description%> </td>
-    </tr>
+         <td><%= link_to "Abandon", profile_path(:id => favor.id), method: :delete, data: { confirm: 'Are you sure' } , :class=> "btn btn-danger"%></td>
+          </tr>
         <%end%>
   </tbody>
 </table>
 </div>
-<div id="favorlist" text-align: center">
+<div class="favorlist">
     <h4> Your Favors-List </h4>
   <table class="table table-hover">
      <thead>
-
-     <tr style="text-decoration: underline, color: darkgoldenrod">
-        <th class="text-align-center" scope="col"><div class="text-align-center">Date </div></th>
-        <th class="text-align-center" scope="col">Category</th>
-        <th scope="col"><div class="text-align-center">Description</div></th>
+     <tr class="favorassist">
+        <th scope="col">Date</th>
+        <th scope="col">Category</th>
+        <th scope="col">Description</th>
         <th scope="col" id="locationtableyourfavs" > Location</th>
         <th scop="col"> Delete </th>
-        <th scop="col"> Complete </th>
-
       </tr>
-     
      </thead>
   <tbody>
   <%# Code that loops all each user's favors and populates each with the defined categories  %>
@@ -71,8 +60,8 @@
       <tr>
         <td scope="row"><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
         <td><p class='<%=favor.category%>'></p> </td>
-        <td scope="row"><%= favor.address %></td>
         <td scope="row"><%= favor.description %></td>
+
 
          <td>
           <%= form_tag  checkbox_path do %>
@@ -84,6 +73,7 @@
 
         <td><%= link_to "delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'You are about to delete this favor, are you sure?' } , :class=> "btn btn-danger"%></td> \
       
+
 
       </tr>
     <% end %>

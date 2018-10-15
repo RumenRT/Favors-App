@@ -23,33 +23,43 @@ h1 {
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 29px;
 }
 
 .companionship {
   background-image: url("https://png.icons8.com/nolan/50/000000/handshake.png");
   background-size: cover;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 24px;
 }
 
 .searching {
-  background-image: url("https://png.icons8.com/material/50/000000/search-more.png");
+  background-image: url("https://mbtskoudsalg.com/images/magnifying-glass-png-no-background-6.png");
   background-size: cover;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  -webkit-transform: scaleX(-1);
+  width: 43px;
+  height: 43px;
+  border-radius: 30%;
   cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 24px;
 }
 
 .cleaning {
   background-image: url("https://png.icons8.com/office/40/000000/broom.png");
   background-size: cover;
   width: 40px;
+  -webkit-transform: scaleX(-1);
   height: 40px;
-  border-radius: 50%;
+  border-radius: 35%;
   cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 36px;
 }
 
 .expertise {
@@ -59,11 +69,11 @@ h1 {
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 30px;
 }
 
-@media screen and (max-width: 400px){
-  
-}
+
 /* https: //png.icons8.com/nolan/50/000000/handshake.png
 https: //png.icons8.com/material/50/000000/search-more.png */
 /* https://png.icons8.com/office/40/000000/broom.png */

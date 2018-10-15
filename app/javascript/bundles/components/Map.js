@@ -144,7 +144,7 @@ export default class Map extends Component {
   render() {
     const style = {
       width: '100%',
-      height: '650px',
+      height: '745px',
       backgroundColor: 'azure'
     };
     return <div style={

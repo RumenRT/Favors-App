@@ -35,9 +35,6 @@ class ProfilesController < ApplicationController
     end 
 
     def update 
-        Notification.where(:favor_id => params[:id]).destroy_all
-        Favor.find(params[:id]).update  
-        redirect_to profiles_path, notice: 'Favor has been marked as completed'
     end 
 
     def delete 
@@ -50,6 +47,7 @@ class ProfilesController < ApplicationController
         redirect_to profiles_path, notice: 'Favor was deleted successfully'
     end 
 
+
     def check_box_completed
        @profile = Profile.where(:user_id => current_user.id).last
        @favor = Favor.find(params[:favor_id])
@@ -58,9 +56,10 @@ class ProfilesController < ApplicationController
        redirect_to profiles_path
     end
 
+
     private 
 
     def profile_params
-        params.require(:profile).permit(:first_name, :last_name, :age, :favors_completed, :favors_offered, :favor_id)
+        params.require(:profile).permit(:first_name, :last_name, :age, :favors_completed, :favors_offered)
     end 
 end

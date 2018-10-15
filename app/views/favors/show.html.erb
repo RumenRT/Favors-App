@@ -1,20 +1,23 @@
-<div className="card">
+<div class="cardd">
 <div class="card-body">
-
+<body>
+<h1>Owner</h1>
+   <h2 style="text-transform: capitalize;">
+    <%= @favor.user.profile.name %></h2> 
 <h1>Description</h1>
     <h2><%= @favor.description %></h2>
 <h1>Category</h1>
-    <h2 style="display: inline"><p class='<%= @favor.category %>'></p><%= @favor.category %></h2>
-<h1>Owner</h1>
-    <h2 class="capitalizeme"><%= @favor.user.profile.name %></h2>
+    <p class="<%= @favor.category %>"</p></h2>
 <h1>Address</h1>
     <h2><%= @favor.address %></h2>
 <h1>Created at</h1>
     <h2><%= @favor.created_at.to_date.strftime("%-m/%-d/%Y") %></h2>
-    <%if @favor.performer %>
+    <%if @favor.performer %> 
+    <hr>
         <h3><%= @favor.performer.profile.first_name %> is on the task!</h3>  
 
     <% else %>
+ 
   <img src="https://media1.tenor.com/images/addfb7eed47bf1413af33d672c06a288/tenor.gif?itemid=12349917" class="center">
             
     <div class="center">

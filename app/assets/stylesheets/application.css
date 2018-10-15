@@ -14,17 +14,32 @@
  *= require_self
  */
 
+/* 
  html {
-   height: 100vh;
- }
- 
+   height: 1vh;
+   
+ } */
  .app-body {
   background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
+  height: 100vh;
  }
  
- img.app-body {
-   float: left;
- }
+* {
+  font-family: 'Montserrat'
+}
+div#fulllogin.row {
+  background-color: transparent;
+}
+.pagemaintitle {
+  text-shadow: 2px 2px black;
+  text-align: center;
+  justify-content: inherit;
+  margin: 0px 0rem 20px 0rem;
+  padding: 8px 5px;
+  border-radius: 0% 0% 43% 43%;
+  background-color: teal;
+
+}
 
 #link_id {
   text-decoration: none;
@@ -38,12 +53,11 @@
   text-align: center;
 }
 
-nav.navbar {
-  margin-bottom: 0
-}
+
 .mainlogin {
   background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
   text-align: center;
+
 }
 .mainlogin h2{
   color: teal;
@@ -57,31 +71,36 @@ nav.navbar {
   height: 40px;
   width: 50%;
 }
-/* h2 {
-  font-family: "Garamond"
+/*//Nav Bar Styling below 
 } */
-
-
 #dropdownMenuButton {
+  background-color: transparent;
+  border-color: transparent;
+
   margin: 7px 0px 3px 15px;
 }
+.btn-success {
+  background-color: transparent;
+  border-color: transparent;
+}
+nav.navbar {
+  margin-bottom: 0
+}
 
-/* #navbarr {
-    display:inline-flex; 
-    text-align: center;
-    padding: 10px 12px;
-    text-decoration: none;
-    margin: 1px;
-    border: 1px;
-    border-color: #00ff99;
-} */
-/* @media screen and (max-width: 400px){
-  .container {
-    margin: 5px;
-  }
-  img.app-body {
-   visibility:hidden;
-   height: 0%
-  }
-  
-} */
+.navbarlogo {
+  overflow:clip;
+  width: 60px;
+  height: 60px;
+  margin: -8px 34px 0px -15px;
+  float: left;
+  background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
+}
+a.nav-item {
+  color: white;
+  margin: 5px 8px 0px 8px ;
+  padding: 5px;  
+}
+li.nav-item { 
+  margin: 10px 10px 0px 5px;
+  justify-content: inherit;
+}

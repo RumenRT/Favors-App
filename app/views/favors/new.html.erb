@@ -1,29 +1,32 @@
 <div class="backgrdiv">
 <div class="NewFavPageComp" >
-<span>
 <h1 id="newfavortitle"> What do you need help with? </h1>
 
 <table>
 <thead>
      <tr class="justabackgroundturq">
-      <th  >
-      <div>
-        <ul id="lilchubber">
-            <li><p>Muscle:  (carrying, lifting, strength related tasks etc.) </p><p class="lifting"></p></li>
-            <li><p>Companionship: (walkers, buddies, emotional support tasks etc.)</p><p class="companionship"></p></li>
-            <li><p>Looking for: (looking for something/someone you've lost)</p><p class="searching"></p></li>
-            <li><p>Cleaning: (car, spill, accident etc.)</p><p class="cleaning"></p></li>
-            <li><p>Expertise / Support: </p><p class="expertise"></p></li>
-        </ul>
-      </div>
       
-      </th>
       <th  class="favorassist">
       
       <div class="favorform">
     <%= render 'form', favor: @favor %>
     </div></th>
+
+    <th  >
+      <div>
+        <ul class="card mr-auto">
+            <li class="iconsnewpage"><h6>Muscle:</h6>  (carrying, lifting, strength related tasks etc.)<p class="lifting"></p></li>
+            <li class="iconsnewpage"><h6>Looking for:</h6> (looking for something/someone you've lost)<p class="searching"></p></li>
+            <li class="iconsnewpage"><h6>Companionship:</h6> (walkers, buddies, emotional support tasks etc.)<p class="companionship"></p></li>
+            <li class="iconsnewpage"><h6>Expertise / Support:</h6> Find a professional of any field near you!<p class="expertise"></li>
+            <li class="iconsnewpage"><h6>Cleaning:</h6> (car, spill, accident etc.)<p class="cleaning"></p></li>
+            
+        </ul>
+      </div>
+      
+      </th>
     </tr>
+
   <%# </thead>
   <tbody>
 <div>

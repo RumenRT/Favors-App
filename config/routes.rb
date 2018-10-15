@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  root 'profiles#index'
+  root 'favors#index'
   resources :profiles 
   resources :favors do
     get :claim
@@ -14,5 +14,5 @@ Rails.application.routes.draw do
 
   post '/favors/create', to: "favors#create"
 
-  post '/profiles/check_box_completed' => 'profiles#check_box_completed',  as: 'checkbox'
+  
 end
