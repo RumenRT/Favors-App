@@ -75,7 +75,7 @@ nav.navbar {
     border: 1px;
     border-color: #00ff99;
 } */
-/* @media screen and (max-width: 400px){
+@media screen and (max-width: 400px){
   .container {
     margin: 5px;
   }
@@ -83,5 +83,19 @@ nav.navbar {
    visibility:hidden;
    height: 0%
   }
+  .mainlogin {
+    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
+    text-align: center;
+    margin-left: 84px;
+  }
+  .mainlogin h2{
+    color: teal;
+    font-weight: bolder
+  }
+  #fulllogin {
+    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
+    text-align: center;
+    margin-left: 384px;
+  }
   
-} */
+}
