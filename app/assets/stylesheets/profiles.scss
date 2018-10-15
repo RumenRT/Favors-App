@@ -7,6 +7,11 @@
     border: 0px;
 
 }
+.card2 {
+    background-color: transparent;
+    border: 0px;
+    margin-left: 3rem;
+}
 .profiletext {
     font-size: large;
     font-weight: bolder;
@@ -14,13 +19,12 @@
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -4rem;
     z-index: 1000;
     display: none;
     float: right;
     min-width: 300px;
     padding: 5px 0;
-    margin: 10px;
     font-size: 11px;
     list-style: none;
     text-align: left;
@@ -30,13 +34,17 @@
     border: 1px solid #ccc;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 10px;
+
 }
-div.favorlist {
-    margin: 5px;
+// div.favorlist {
+//     margin: 5px;
+// }
+.containerbrowser {
+    margin: 10px;
+    display: inline-block;
 }
 .container {
-    padding-right: 0px;
-    padding-left: 0px;
+    margin: 10px;
 }
 div.profileinfo {
     margin: 0px 40px 0px 40px;
@@ -94,13 +102,13 @@ tr.favorassist {
 
 
 .favorlist {
+    margin-bottom: 2rem !important;
+    margin: 2rem auto;
     box-shadow: 4px 7px teal;
     text-align: center;
     border-radius: 10px; 
-    width:  center 300px;
     border: 10px solid turquoise;
     padding: 10px;
-    margin: 10px;
     box-sizing: content-box;
     background-color: whitesmoke;
 }
@@ -154,6 +162,20 @@ tr.favorassist {
 
 // MOBILE RESPONSIVENESS BELOW 
 
+// MOBILE RESPONSIVENESS BELOW 
+
+// MOBILE RESPONSIVENESS BELOW 
+
+// MOBILE RESPONSIVENESS BELOW 
+
+// MOBILE RESPONSIVENESS BELOW 
+
+// MOBILE RESPONSIVENESS BELOW 
+
+// MOBILE RESPONSIVENESS BELOW 
+
+// MOBILE RESPONSIVENESS BELOW 
+
 
 @media screen and (max-width: 370px){
     .list-group-item {
@@ -197,15 +219,16 @@ tr.favorassist {
     a.btn.btn-danger{
         text-transform: capitalize;
     }
+
     #favorlist {
         border-spacing: length;
         box-shadow: 4px 7px teal;
         text-align: justify;
-        border-radius: 10px; 
-        width:  center 300px;
+        border-radius: 10px;
+        margin-bottom: 2.2rem;
         border: 10px solid turquoise;
-        padding: 10px;
-        margin: 10px;
+        padding: 7px;
+        margin: 7px;
         box-sizing: content-box;
         background-color: whitesmoke;
         font-size: 12px;

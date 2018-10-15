@@ -21,9 +21,13 @@
  } */
  .app-body {
   background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
-  height: 100vh;
+  
  }
- 
+ .app-body2 {
+  background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
+  height: -webkit-fill-available;
+ }
+
 * {
   font-family: 'Montserrat'
 }
@@ -76,13 +80,11 @@ div#fulllogin.row {
 #dropdownMenuButton {
   background-color: transparent;
   border-color: transparent;
+  box-shadow: none;
 
   margin: 7px 0px 3px 15px;
 }
-.btn-success {
-  background-color: transparent;
-  border-color: transparent;
-}
+
 nav.navbar {
   margin-bottom: 0
 }

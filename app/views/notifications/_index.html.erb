@@ -1,7 +1,7 @@
 <div class="btn-group dropdown">
-  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <span class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    <img src="https://steemitimages.com/DQmUUmsQNc1c6sMVyunE29cqFkWLEJLsgYo68TsbdcySb1a/unnamed.png" height="30px" class="nav-item" float-right>
-  </button>
+  </span>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <ul>
         <%  Notification.joins( :favor ).where(user_id: current_user.id).order(created_at: :desc).each do |n| %>

@@ -3,23 +3,23 @@
 <h1 class= "pagemaintitle"> <%= @profiles.first_name %>'s Profile</h1>
 
 <div>
-    <img src="http://i.imgur.com/CrOKjtY.jpg" class="profilepic">
+    <%# <img src="http://i.imgur.com/CrOKjtY.jpg" class="profilepic"> %>
 </div>
   <div class="profileinfo">
    <div class="profileinfocontent"> 
      <ul class= "card">
         <li class="list-group-item"><p class="profiletext">Name:</p><%= @profiles.name %></li>
         <li class="list-group-item"><p class="profiletext">Age:</p><%= @profiles.age %></li>
-        <li class="list-group-item"><p>Favors Given:</p><%=  @approved_favor_count %></li>
-        <li class="list-group-item"><p>Favors Received:</p><%= @profiles.favors_offered %></li>
+        <li class="list-group-item"><p>Favors Received:</p><%=  @approved_favor_count %></li>
+        <li class="list-group-item"><p>Favors Given:</p><%= @profiles.favors_offered %></li>
     </ul>
     </div>
   </div>
 
     
   </div>
-<div class="favorlist">
-<h4 style=>Favors you're assisting with</h4>
+<div class="favorlist container mb-2 mr-auto ml-auto">
+<h4 style=> Pending Favors </h4>
 <table class="table table-hover">
   <thead>
      <tr class="favorassist">
@@ -36,22 +36,22 @@
          <td><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
          <td><p class='<%=favor.category%>'></p> </td>
          <td> <%= favor.description%> </td>
-         <td><%= link_to "Abandon", profile_path(:id => favor.id), method: :delete, data: { confirm: 'Are you sure' } , :class=> "btn btn-danger"%></td>
+         <td><%= link_to "Abandon", favor_path(:id => favor.id), method: :update, data: { confirm: "Are you sure you want to abandon #{favor.user.profile.name}'s favor?" } , :class=> "btn btn-danger"%></td>
           </tr>
         <%end%>
   </tbody>
 </table>
 </div>
-<div class="favorlist">
-    <h4> Your Favors-List </h4>
+<div class="favorlist container mb-2 mr-auto ml-auto">
+    <h4> Requested Favors </h4>
   <table class="table table-hover">
      <thead>
      <tr class="favorassist">
         <th scope="col">Date</th>
         <th scope="col">Category</th>
         <th scope="col">Description</th>
-        <th scope="col" id="locationtableyourfavs" > Location</th>
-        <th scop="col"> Delete </th>
+        <th scope="col" id="locationtableyourfavs" > </th>
+        <th scop="col " >  </th>
       </tr>
      </thead>
   <tbody>
@@ -61,19 +61,17 @@
         <td scope="row"><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
         <td><p class='<%=favor.category%>'></p> </td>
         <td scope="row"><%= favor.description %></td>
-
-
-         <td>
+         <td >
+        <div class="form-group">
           <%= form_tag  checkbox_path do %>
               <%= hidden_field_tag :favor_id,  favor.id %>
               <%= hidden_field_tag  :completed, true %>
-              <%= submit_tag "Completed" %>
+              <%= submit_tag "Completed", class: 'btn btn-success' %>
           <% end %>
-         </td>
+        </div>
+        </td>
 
-        <td><%= link_to "delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'You are about to delete this favor, are you sure?' } , :class=> "btn btn-danger"%></td> \
-      
-
+        <td><%= link_to "delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'You are about to delete your favor, are you sure?' } , :class=> "btn btn-danger"%></td> 
 
       </tr>
     <% end %>
