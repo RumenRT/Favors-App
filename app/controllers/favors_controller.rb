@@ -49,6 +49,7 @@ class FavorsController < ApplicationController
     @favor = Favor.new(favor_params)
     @favor.category =  params[:post][:category].to_i
     @favor.user = current_user
+    @favor.completed = false
     # notice does not work?
     if @favor.save 
 
