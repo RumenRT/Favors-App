@@ -14,7 +14,6 @@
  *= require_self
  */
 
-
  html {
    height: 100vh;
  }
@@ -66,3 +65,23 @@ nav.navbar {
 #dropdownMenuButton {
   margin: 7px 0px 3px 15px;
 }
+
+/* #navbarr {
+    display:inline-flex; 
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    margin: 1px;
+    border: 1px;
+    border-color: #00ff99;
+} */
+/* @media screen and (max-width: 400px){
+  .container {
+    margin: 5px;
+  }
+  img.app-body {
+   visibility:hidden;
+   height: 0%
+  }
+  
+} */
