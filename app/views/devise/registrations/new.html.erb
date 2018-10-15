@@ -1,5 +1,5 @@
 <div class="col-md-4">
-  <div class="mainlogin" style="width: 95vw; height: 100vh; background-color: teal;  background-size: cover; background-position: center center;">
+  
   <h2>Sign up</h2>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
@@ -26,6 +26,5 @@
       <%= f.submit "Sign up" %>
     </div>
   <% end %>
-  </div>
 </div>
 <%= render "devise/shared/links" %>
