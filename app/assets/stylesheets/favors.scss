@@ -159,15 +159,15 @@ text-align: center;
     margin-right: auto;
     width: 50%;
 }
-.justabackground {
-   height: 100vh;
-    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
-}
+// .justabackground {
+//    height: 100vh;
+//     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
+// }
 
-.justabackgroundturq {
-    background: turquoise;
+// .justabackgroundturq {
+//     background: turquoise;
 
-}
+// }
 td.text-left {
     text-align:center;
     text-transform: capitalize;
@@ -196,16 +196,20 @@ h1.showmedafava {
     border: 2px solid turquoise;
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 768px){
     #lilchubber {
      float: left;
      margin-right: 10%;
      padding-right: 0%;
      border: 1px;
-     width: 187px;
-     font-size: 12px;
+     width: 384px;
+     font-size: 20px;
+    //  color: white;
     }
     #postcategory {
         background-color: aliceblue;
+    }
+    .ppp{
+        color: white;
     }
 }
