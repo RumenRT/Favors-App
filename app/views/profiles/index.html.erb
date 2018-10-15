@@ -2,17 +2,20 @@
 
 <h1 class= "pagemaintitle"> <%= @profiles.first_name %>'s Profile</h1>
 
-   <div class="profileinfo">
-    <div class="profileinfocontent"> 
-   <ul class= "card">
-      <li class="list-group-item"><p class="profiletext">Name:</p><%= @profiles.name %></li>
-      <li class="list-group-item"><p class="profiletext">Age:</p><%= @profiles.age %></li>
-      <li class="list-group-item"><p>Favors Given:</p><%= @profiles.favors_completed %></li>
-      <li class="list-group-item"><p>Favors Received:</p><%= @profiles.favors_offered %></li>
-  </ul>
-       </div>
-       </div>
-    
+<div>
+    <img src="http://i.imgur.com/CrOKjtY.jpg" class="profilepic">
+</div>
+  <div class="profileinfo">
+   <div class="profileinfocontent"> 
+     <ul class= "card">
+        <li class="list-group-item"><p class="profiletext">Name:</p><%= @profiles.name %></li>
+        <li class="list-group-item"><p class="profiletext">Age:</p><%= @profiles.age %></li>
+        <li class="list-group-item"><p>Favors Given:</p><%=  @approved_favor_count %></li>
+        <li class="list-group-item"><p>Favors Received:</p><%= @profiles.favors_offered %></li>
+    </ul>
+    </div>
+  </div>
+
     
   </div>
 <div class="favorlist">
@@ -58,9 +61,20 @@
         <td scope="row"><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
         <td><p class='<%=favor.category%>'></p> </td>
         <td scope="row"><%= favor.description %></td>
-        <td scope="row"><%= favor.street %></td>
-        
-        <td><%= link_to "Delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'Are you sure' } , :class=> "btn btn-danger"%></td> 
+
+
+         <td>
+          <%= form_tag  checkbox_path do %>
+              <%= hidden_field_tag :favor_id,  favor.id %>
+              <%= hidden_field_tag  :completed, true %>
+              <%= submit_tag "Completed" %>
+          <% end %>
+         </td>
+
+        <td><%= link_to "delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'You are about to delete this favor, are you sure?' } , :class=> "btn btn-danger"%></td> \
+      
+
+
       </tr>
     <% end %>
   </tbody>
