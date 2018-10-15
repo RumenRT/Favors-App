@@ -205,39 +205,44 @@ text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-
-.justabackground {
-   height: 100vh;
-    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
 }
 
-.justabackgroundturq {
-    background: turquoise;
+// All of this stuff fucks up the creat ne favor page style
 
-}
-td.text-left {
-    text-align:center;
-    text-transform: capitalize;
-}
-th.text-left {
-    text-align:center;
-}
-.capitalizeme {
-    text-transform: capitalize;
-}
-.showmedafava {
-    // margin: 10px 20px 10px 20px;
+// .justabackground {
+//    height: 100vh;
+//     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
+// }
+
+// .justabackgroundturq {
+//     background: turquoise;
+
+// }
+// td.text-left {
+//     text-align:center;
+//     text-transform: capitalize;
+// }
+// th.text-left {
+//     text-align:center;
+// }
+// .capitalizeme {
+//     text-transform: capitalize;
+// }
+// .showmedafava {
+//     // margin: 10px 20px 10px 20px;
    
-    border-radius: 7px;
+//     border-radius: 7px;
     
-}
-form {
-    border-radius: 5px;
-    border: 2px solid turquoise;
-    background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
-}}
+// }
+// form {
+//     border-radius: 5px;
+//     border: 2px solid turquoise;
+//     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
+// }
 
-@media screen and (max-width: 400px){
+
+
+@media screen and (max-width: 768px){
     #lilchubber {
      float: left;
      margin-right: 10%;

@@ -159,6 +159,14 @@ tr.favorassist {
     height: 30px;
     align-items: center;
 }
+.profilepic {
+    float :right;
+    margin-right: 7%;
+    width:380px;
+    height:380px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
 
 // MOBILE RESPONSIVENESS BELOW 
 
@@ -177,7 +185,7 @@ tr.favorassist {
 // MOBILE RESPONSIVENESS BELOW 
 
 
-@media screen and (max-width: 370px){
+@media screen and (max-width: 786px){
     .list-group-item {
         float: left;
         margin-left: 1%;
@@ -188,9 +196,10 @@ tr.favorassist {
     .profilepic {
         float :right;
         margin-right: 7%;
-        width:180px;
-        height:180px;
+        width:260px;
+        height:260px;
         margin-top: 20px;
+        border-radius: 50%;
     }
     #searchfavorbar {
         margin: 0px 10px 0px 10px;
