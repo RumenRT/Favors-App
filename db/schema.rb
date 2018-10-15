@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2018_10_14_181304) do
     t.integer "performer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "read_status", default: false
     t.index ["favor_id"], name: "index_notifications_on_favor_id"
     t.index ["user_id"], name: "index_notifications_on_user_id"
   end
