@@ -14,5 +14,6 @@ Rails.application.routes.draw do
 
   post '/favors/create', to: "favors#create"
 
+  post '/profiles/check_box_completed' => 'profiles#check_box_completed',  as: 'checkbox'
   
 end

@@ -24,6 +24,15 @@ h1 {
   border-radius: 50%;
   cursor: pointer;
   margin-bottom: 0px;
+}
+.liftingnewfav {
+  background-image: url("https://png.icons8.com/ultraviolet/50/000000/flex-biceps.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-bottom: 0px;
   margin-left: 29px;
 }
 
@@ -35,7 +44,16 @@ h1 {
   border-radius: 50%;
   cursor: pointer;
   margin-bottom: 0px;
-  margin-left: 24px;
+}
+.companionshipnewfav {
+  background-image: url("https://png.icons8.com/nolan/50/000000/handshake.png");
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 97px;
 }
 
 .searching {
@@ -47,10 +65,31 @@ h1 {
   border-radius: 30%;
   cursor: pointer;
   margin-bottom: 0px;
-  margin-left: 24px;
+}
+.searchingnewfav {
+  background-image: url("https://mbtskoudsalg.com/images/magnifying-glass-png-no-background-6.png");
+  background-size: cover;
+  -webkit-transform: scaleX(-1);
+  width: 43px;
+  height: 43px;
+  border-radius: 30%;
+  cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 74px;
 }
 
 .cleaning {
+  background-image: url("https://png.icons8.com/office/40/000000/broom.png");
+  background-size: cover;
+  width: 40px;
+  -webkit-transform: scaleX(-1);
+  height: 40px;
+  border-radius: 35%;
+  cursor: pointer;
+  margin-bottom: 0px;
+
+}
+.cleaningnewfav {
   background-image: url("https://png.icons8.com/office/40/000000/broom.png");
   background-size: cover;
   width: 40px;
@@ -71,6 +110,16 @@ h1 {
   cursor: pointer;
   margin-bottom: 0px;
   margin-left: 30px;
+}
+.expertisenewfav {
+  background-image: url("https://png.icons8.com/dusk/40/000000/development-skill.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 61px;
 }
 
 

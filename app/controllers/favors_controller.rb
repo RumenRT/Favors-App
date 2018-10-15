@@ -65,6 +65,7 @@ class FavorsController < ApplicationController
 
   def update
     @favor = Favor.find(params[:id])
+    
     @favor.update(performer_id: current_user.id) if params[:performer_id]
     @favor.save
     Notification.create(user: @favor.user, performer_id: current_user.id, favor: @favor) if params[:performer_id]
@@ -77,9 +78,13 @@ class FavorsController < ApplicationController
 
   def claim
     @favor = Favor.find(params[:favor_id])
-    @favor.update!(performer_id: params[:user_id])
-    Notification.create(user: @favor.user, performer_id: params[:user_id], favor: @favor)
-    redirect_to profiles_path
+    if @favor.user == current_user
+      redirect_back(fallback_location: root_path, warning: "You can't claim your own favors, silly. :P")
+    else
+      @favor.update!(performer_id: params[:user_id])
+      Notification.create(user: @favor.user, performer_id: params[:user_id], favor: @favor)
+      redirect_to profiles_path
+    end
   end
 
   private

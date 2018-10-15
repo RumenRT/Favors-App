@@ -14,6 +14,9 @@
     padding: 8px 16px 0px 15px;
 }
 
+html, body {
+    min-height: 100%;
+}
 
 label {
     margin: 8px;
@@ -63,13 +66,14 @@ h6 {
 }
 
 
-#maptitle {
-   
+#maptitle {    
+    margin-top:0;
+    position: static;
     text-align: center;
-    font-style: bold;
-    padding: 10px;
-    
+    padding: 9px;
     background-color: teal;
+    bottom: 0;
+    width: 100%;
 }
 
 #titleboxmap {
@@ -92,7 +96,7 @@ align-content: flex-end  ;
 }
 #NewFavPageComp  {
     display: inline-block;
-   
+    height: 100vh;
     background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%)
 }
 #newfavcat {
@@ -111,6 +115,9 @@ div.favorform {
     width: auto;
     height: auto;
     padding: 0px 14px 91px 0px;
+}
+.text_input {
+    background-color: whitesmoke;
 }
 div.mapboxgl-popup-content {
     border-radius: 7px;
@@ -132,6 +139,10 @@ h1 {margin: 0px;}
 
 }
 
+#claimitguy {
+    height: 5rem;
+    width: 5rem;
+}
 button.mapboxgl-popup-close-button {
     position: fixed;
     right: -5px;
@@ -189,8 +200,8 @@ text-align: center;
 #h33{
 text-align: center;
 }
-.center {
-    display: block;
+.centerbutton {
+    color: #ffc107;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
@@ -236,6 +247,6 @@ form {
      font-size: 12px;
     }
     #postcategory {
-        background-color: aliceblue;
+        background-color: whitesmoke;
     }
 } 
