@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  root 'profiles#index'
+  root 'favors#index'
   resources :profiles 
   resources :favors do
     get :claim

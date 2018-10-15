@@ -10,6 +10,11 @@
     border: solid 4px turquoise; 
     background-color: whitesmoke; 
 } 
+.navbar  {
+    padding: 8px 16px 0px 15px;
+}
+
+
 label {
     margin: 8px;
     display: inline-block;
@@ -31,9 +36,13 @@ ul.card.mr-auto {
 .field input {
     width: 100%;
 }
+h6 {
+    font-weight:bolder;
+    text-decoration: underline;
+}
 
 .custom-select {
-    margin-top: -157px;
+    margin-top: -24px;
     text-transform: capitalize;
     background-color: whitesmoke;
 }
@@ -54,13 +63,12 @@ ul.card.mr-auto {
 }
 
 
-
 #maptitle {
    
     text-align: center;
     font-style: bold;
     padding: 10px;
-    padding-bottom:300vw;
+    
     background-color: teal;
 }
 

@@ -23,6 +23,8 @@ h1 {
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 29px;
 }
 
 .companionship {
@@ -32,6 +34,8 @@ h1 {
   height: 48px;
   border-radius: 50%;
   cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 24px;
 }
 
 .searching {
@@ -42,6 +46,8 @@ h1 {
   height: 43px;
   border-radius: 30%;
   cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 24px;
 }
 
 .cleaning {
@@ -52,6 +58,8 @@ h1 {
   height: 40px;
   border-radius: 35%;
   cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 36px;
 }
 
 .expertise {
@@ -61,6 +69,8 @@ h1 {
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
+  margin-bottom: 0px;
+  margin-left: 30px;
 }
 
 
