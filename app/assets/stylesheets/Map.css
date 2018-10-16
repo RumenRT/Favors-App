@@ -87,18 +87,16 @@ h1 {
   border-radius: 35%;
   cursor: pointer;
   margin-bottom: 0px;
-
 }
 .cleaningnewfav {
   background-image: url("https://png.icons8.com/office/40/000000/broom.png");
   background-size: cover;
   width: 40px;
-  -webkit-transform: scaleX(-1);
   height: 40px;
   border-radius: 35%;
   cursor: pointer;
   margin-bottom: 0px;
-  margin-left: 36px;
+  margin-left: 32px;
 }
 
 .expertise {
@@ -109,7 +107,6 @@ h1 {
   border-radius: 50%;
   cursor: pointer;
   margin-bottom: 0px;
-  margin-left: 30px;
 }
 .expertisenewfav {
   background-image: url("https://png.icons8.com/dusk/40/000000/development-skill.png");
@@ -119,7 +116,7 @@ h1 {
   border-radius: 50%;
   cursor: pointer;
   margin-bottom: 0px;
-  margin-left: 61px;
+  margin-left: 74px;
 }
 
 

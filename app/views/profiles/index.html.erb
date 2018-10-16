@@ -1,7 +1,11 @@
 <div >
 
 <h1 class= "pagemaintitle"> <%= @profiles.first_name %>'s Profile</h1>
-
+  <% if notice %>
+      <div class="alert alert-success" role="alert">
+        <%= notice %>
+      </div>
+  <% end %>
 <div>
     <%# <img src="http://i.imgur.com/CrOKjtY.jpg" class="profilepic"> %>
 </div>

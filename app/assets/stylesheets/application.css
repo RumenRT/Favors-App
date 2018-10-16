@@ -19,6 +19,13 @@
    height: 1vh;
    
  } */
+ .alert {
+ position: relative;
+ padding: 1rem 1.25rem;
+ margin: 0px;
+ border: 1px solid transparent;
+ border-radius: .15rem;
+ }
  .app-body {
   background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
   
