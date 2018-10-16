@@ -25,9 +25,9 @@ export default class Map extends Component {
     const mapOptions = {
       container: this.mapContainer,
       style: `mapbox://styles/mapbox/streets-v9`,
-      pitch: 0, // pitch in degrees
+      pitch: 10, // pitch in degrees
       bearing: 0, // bearing in degrees
-      zoom: 15,
+      zoom: 13,
       minZoom: 5,
       maxZoom: 25,
       center: [-80.2044, 25.8028]

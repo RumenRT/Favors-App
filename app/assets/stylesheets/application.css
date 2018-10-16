@@ -66,7 +66,7 @@ div#fulllogin.row {
 
 
 .mainlogin {
-  background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
+ 
   text-align: center;
 
 }
@@ -76,6 +76,7 @@ div#fulllogin.row {
 }
 
 #fulllogin {
+ height: 100vh;
   background: linear-gradient(to bottom, #00ffff 0%, #00ff99 100%);
 }
 .action input[type=submit] {
