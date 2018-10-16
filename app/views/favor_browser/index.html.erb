@@ -21,7 +21,7 @@
         <% unless favor.completed == true %>
           <tr>
             <th scope="row"> <%= index + 1 %></th>
-            <td><p class='<%=favor.category%>'></p> </td>
+            <td><p class='<%=favor.category%>'</p> </td>
             <td class="text-left"><%= favor.description %></td>
             <td style="text-transform: capitalize" class="text-left"><%= favor.user.profile.name %>
             <td class="text-left"><%= link_to 'Info', favor_path(favor.id), class: 'btn btn-light' %></td>

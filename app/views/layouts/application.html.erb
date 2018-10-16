@@ -40,6 +40,11 @@
             </div>
             </ul>
           </nav>
+        <% if notice %>
+      <div class="alert alert-success" role="alert">
+        <%= notice %>
+      </div>
+    <% end %>
     <%= yield %>
    </body>
 </html>
