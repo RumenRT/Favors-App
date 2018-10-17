@@ -17,19 +17,22 @@
         <h3><%= @favor.performer.profile.first_name %> is on the task!</h3>  
 
     <% else %>
+     <div class="showcontrols">
     <% unless @favor.user_id == current_user.id %>
- <div class="centerbutton">
+ 
+<div class="claimmenow">
         <%= form_with(model: @favor) do |form| %>
             <%= hidden_field_tag "performer_id", current_user.id %>
-            <%= form.submit "Claim favor" %>
+            <%= form.submit "Claim favor" , class:"btn btn-warning" %>
         <% end %>
-  <img src="https://media1.tenor.com/images/addfb7eed47bf1413af33d672c06a288/tenor.gif?itemid=12349917" class="center" id="claimitguy">
+            <img src="https://media1.tenor.com/images/addfb7eed47bf1413af33d672c06a288/tenor.gif?itemid=12349917" class="center" id="claimitguy">
             
-    
-    <% end %>
+    <div>
+        <% end %>
+
+      <% end %>
+<%= link_to 'Back', favorbrowsers_path , class:"gobacklink btn-btn-light" %>
 </div>
-<% end %>
-<%= link_to 'Back', favorbrowsers_path , class:"gobacklink" %>
-</div>
+
 
 
