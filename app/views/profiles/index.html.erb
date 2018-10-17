@@ -21,7 +21,7 @@
   </div>
 <div class="favorlist container mb-2 mr-auto ml-auto">
 <h4 style=> Pending Favors </h4>
-<table class="table table-hover">
+<table class="table table-hover favortables" >
   <thead>
      <tr class="favorassist">
       <th scope="col" >Date</th>
@@ -32,11 +32,12 @@
   </thead>
   <tbody>
   <%# Code that loops all each user's favors and populates each with the defined categories  %>
-    <tr>  
+    <tr >
+        
         <% @performer_favors.each do |favor| %>
          <td><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
          <td><p class='<%=favor.category%>'></p> </td>
-         <td> <%= favor.description%> </td>
+         <td><%= link_to favor.description, favor_path(favor.id) %> </td>
          <td><%= link_to "Abandon", favor_unclaim_path(:favor_id => favor.id), method: :get, data: { confirm: "Are you sure you want to abandon #{favor.user.profile.name}'s favor?" } , :class=> "btn btn-danger"%></td>
           </tr>
         <%end%>
@@ -45,7 +46,7 @@
 </div>
 <div class="favorlist container mb-2 mr-auto ml-auto">
     <h4> Requested Favors </h4>
-  <table class="table table-hover">
+  <table class="table table-hover favortables">
      <thead>
      <tr class="favorassist">
         <th scope="col">Date</th>
@@ -61,7 +62,7 @@
       <tr>
         <td scope="row"><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
         <td><p class='<%=favor.category%>'></p> </td>
-        <td scope="row"><%= favor.description %></td>
+        <td scope="row"><%= link_to favor.description, favor_path(favor.id) %> </td>
          <td >
         <div class="form-group">
         <% unless favor.completed == true %>

@@ -50,9 +50,10 @@
     border-radius: 10px;
 
 }
-// div.favorlist {
-//     margin: 5px;
-// }
+td p {
+    margin-right: auto;
+    margin-left: auto;
+}
 .containerbrowser {
     margin: 30px;
 }
@@ -205,6 +206,25 @@ tr.favorassist {
         border-radius: 50%;
         margin-top: 48px;
     }
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: -8rem;
+        z-index: 1000;
+        display: none;
+        float: right;
+        min-width: 300px;
+        padding: 5px 0;
+        font-size: 11px;
+        list-style: none;
+        text-align: left;
+        background-color: ghostwhite;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 10px;}
+
 
 .card {
     margin-top: 15px;
@@ -266,9 +286,40 @@ tr.favorassist {
         text-decoration: underline;
        
     }
-    // .favorassistt{
-    //     font-size: 12px;
-    //     padding: 1px, 1px, 1px, 1px;
-    //     text-align: center;
-    // }
+    .favortables {
+     
+    margin-bottom: 0px;
+    }
+
+    td p {
+    margin-right: auto;
+    margin-left: auto;
+    }
+
+}
+
+
+
+@media screen and (max-width: 400px){
+.favortables {
+    font-size: .8rem;
+table-layout: fixed;
+width: 100%;
+margin-bottom: 0px;
+}
+
+
+.favortables tbody tr {
+    font-size: .8rem;
+}
+.favorlist h4 {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: bold;
+    color: brown; }
+    .btn {
+        padding: .175rem .15rem;
+        font-size: .6rem;
+    }
 }

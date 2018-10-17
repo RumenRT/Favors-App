@@ -119,7 +119,39 @@ h1 {
   margin-left: 74px;
 }
 
+@media screen and (max-width: 400px){
+  .lifting {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-size: contain;
+}
+.companionship {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-size: contain;
+}
+.expertise {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-size: contain;
+}
+.cleaning {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-size: contain;
+}
 
+.searching {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-size: contain;
+}
+
+.table td {
+  display: table-cell;
+  vertical-align: middle;
+}
+}
 /* https: //png.icons8.com/nolan/50/000000/handshake.png
 https: //png.icons8.com/material/50/000000/search-more.png */
 /* https://png.icons8.com/office/40/000000/broom.png */
