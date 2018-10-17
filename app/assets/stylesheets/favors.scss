@@ -18,6 +18,18 @@ html, body {
     min-height: 100%;
 }
 
+.gobacklink {
+    margin: 20px;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    color: black;
+    background-color: white;
+    margin-left: 300px;
+
+}
 label {
     margin: 8px;
     display: inline-block;
@@ -139,10 +151,29 @@ h1 {margin: 0px;}
 .mapboxgl-ctrl.mapboxgl-ctrl-attrib {visibility: hidden;
 
 }
+.showcontrols {
+    
+    justify-content: space-around;
 
+}
+
+#claimmapicon {
+height: 20px;
+width: auto; 
+font-size: inherit;
+padding-bottom: 19px;
+}
+
+.claimmenow {
+    margin:20px;
+}
 #claimitguy {
+    margin-left: 16px;
+    align-content: center;
+    border-radius: 20%;
     height: 5rem;
     width: 5rem;
+    margin-top: 5px;
 }
 button.mapboxgl-popup-close-button {
     position: fixed;

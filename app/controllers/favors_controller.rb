@@ -76,6 +76,16 @@ class FavorsController < ApplicationController
     @favor = Favor.find(params[:id])
   end
 
+  def unclaim
+    @favor = Favor.find(params[:favor_id])
+    if @favor.performer == current_user
+      @favor.update!(performer_id: nil) 
+      redirect_to profiles_path
+    else 
+      redirect_to profiles_path
+    end
+  end 
+
   def claim
     @favor = Favor.find(params[:favor_id])
     if @favor.user == current_user

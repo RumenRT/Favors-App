@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :profiles 
   resources :favors do
     get :claim
+    get :unclaim
   end
 
   post '/favors/create', to: "favors#create"

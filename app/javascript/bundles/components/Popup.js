@@ -9,7 +9,7 @@ export default class Popup extends Component {
         <p><strong>Name: {this.props.favor.user_name}</strong></p>
         <p><strong>Needs: {this.props.favor.description}</strong></p>
         <p id="popupaddress"><strong>{this.props.favor.address}</strong></p>
-        <a href={`/favors/${this.props.favor.id}/claim?user_id=${this.props.user_id}`}>Claim Favor</a>
+        <a class="btn btn-warning" id="claimmapicon" href={`/favors/${this.props.favor.id}/claim?user_id=${this.props.user_id}`}>Claim Favor</a>
       </div >
     )
   }
