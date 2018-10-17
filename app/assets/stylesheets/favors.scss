@@ -102,7 +102,7 @@ align-content: flex-end  ;
     margin: 0px 0rem 0px 0rem;
     padding: 0px 0px;
     border-radius: 0% 0% 43% 43%;
-    
+  
     font-family: 'Montserrat';
     background-color: teal;
    
@@ -157,11 +157,13 @@ h1 {margin: 0px;}
 
 }
 
+
 #claimmapicon {
 height: 20px;
+padding-bottom: 22px;
 width: auto; 
 font-size: inherit;
-padding-bottom: 19px;
+padding-left: 1rem;
 }
 
 .claimmenow {
@@ -281,4 +283,28 @@ form {
     #postcategory {
         background-color: whitesmoke;
     }
+    #newfavortitle {
+        font-size: 1rem;
+    }
 } 
+@media screen and (max-width: 768px){
+    #newfavortitle {
+            font-size: 2rem;
+    }
+    .pagemaintitle {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:400px) {
+    
+div.favorform {    
+    margin: 0px;
+    margin-bottom: auto;
+    width: auto;
+    height: auto;
+    padding: 0px;
+}
+#newfavortitle {
+    font-size: 1.2rem;
+}
+}
