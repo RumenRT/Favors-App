@@ -34,6 +34,7 @@
     position: absolute;
     top: 100%;
     left: -4rem;
+    opacity: 0.9;
     z-index: 1000;
     display: none;
     float: right;
@@ -209,11 +210,12 @@ tr.favorassist {
     .dropdown-menu {
         position: absolute;
         top: 100%;
-        left: -8rem;
+        left: -13rem;
+        opacity: 0.9;
         z-index: 1000;
         display: none;
         float: right;
-        min-width: 300px;
+        min-width: 240px;
         padding: 5px 0;
         font-size: 11px;
         list-style: none;
@@ -302,7 +304,7 @@ tr.favorassist {
 
 @media screen and (max-width: 400px){
 .favortables {
-    font-size: .8rem;
+font-size: .8rem;
 table-layout: fixed;
 width: 100%;
 margin-bottom: 0px;
@@ -317,9 +319,22 @@ margin-bottom: 0px;
     font-size: 1rem;
     font-weight: 300;
     font-style: bold;
-    color: brown; }
-    .btn {
+    color: brown; 
+}
+
+.btn {
         padding: .175rem .15rem;
         font-size: .6rem;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .dropdown-menu {
+        left: -16rem;
+        min-width: 200px;
+        padding: 3px 0px;
+        font-size: 8px;
+        opacity: 0.9;
+        min-width: 140px;
+       
+    }}
