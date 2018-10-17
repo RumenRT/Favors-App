@@ -1,11 +1,7 @@
 <div >
 
 <h1 class= "pagemaintitle"> <%= @profiles.first_name %>'s Profile</h1>
-  <% if notice %>
-      <div class="alert alert-success" role="alert">
-        <%= notice %>
-      </div>
-  <% end %>
+  
   <div class="profileinfo">
     <div class="profilepicdiv">
         <img src="http://i.imgur.com/CrOKjtY.jpg" class="profilepic" /> 
@@ -41,7 +37,7 @@
          <td><%= favor.created_at.to_date.strftime("%-m/%-d/%Y") %></td>
          <td><p class='<%=favor.category%>'></p> </td>
          <td> <%= favor.description%> </td>
-         <td><%= link_to "Abandon", favor_path(:id => favor.id), method: :update, data: { confirm: "Are you sure you want to abandon #{favor.user.profile.name}'s favor?" } , :class=> "btn btn-danger"%></td>
+         <td><%= link_to "Abandon", favor_unclaim_path(:favor_id => favor.id), method: :get, data: { confirm: "Are you sure you want to abandon #{favor.user.profile.name}'s favor?" } , :class=> "btn btn-danger"%></td>
           </tr>
         <%end%>
   </tbody>
@@ -68,15 +64,19 @@
         <td scope="row"><%= favor.description %></td>
          <td >
         <div class="form-group">
+        <% unless favor.completed == true %>
           <%= form_tag  checkbox_path do %>
-              <%= hidden_field_tag :favor_id,  favor.id %>
-              <%= hidden_field_tag  :completed, true %>
+              <%= hidden_field_tag :favor_id,  favor.id %> 
+                <%= hidden_field_tag  :completed, true %>
+             
               <%= submit_tag "Completed", class: 'btn btn-success' %>
+              <% end %>
           <% end %>
+          
         </div>
         </td>
 
-        <td><%= link_to "delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'You are about to delete your favor, are you sure?' } , :class=> "btn btn-danger"%></td> 
+        <td><%= link_to "delete", profile_path(:id => favor.id), method: :delete, data: { confirm: 'You are about to delete your favor, are you sure?' } , :class=> "btn btn-danger", style: "text-transform: capitalize" %></td> 
 
       </tr>
     <% end %>

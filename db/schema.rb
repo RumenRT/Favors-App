@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2018_10_15_231618) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "favors", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "description"
     t.float "latitude"
     t.float "longitude"
@@ -26,15 +29,15 @@ ActiveRecord::Schema.define(version: 2018_10_15_231618) do
     t.string "state"
     t.string "country"
     t.boolean "use_current_location", default: false, null: false
-    t.integer "performer_id"
+    t.bigint "performer_id"
     t.boolean "completed"
     t.index ["performer_id"], name: "index_favors_on_performer_id"
     t.index ["user_id"], name: "index_favors_on_user_id"
   end
 
   create_table "notifications", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "favor_id"
+    t.bigint "user_id"
+    t.bigint "favor_id"
     t.integer "performer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -50,7 +53,7 @@ ActiveRecord::Schema.define(version: 2018_10_15_231618) do
     t.integer "age"
     t.integer "favors_completed"
     t.integer "favors_offered"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
@@ -71,4 +74,9 @@ ActiveRecord::Schema.define(version: 2018_10_15_231618) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "favors", "users"
+  add_foreign_key "favors", "users", column: "performer_id"
+  add_foreign_key "notifications", "favors"
+  add_foreign_key "notifications", "users"
+  add_foreign_key "profiles", "users"
 end
