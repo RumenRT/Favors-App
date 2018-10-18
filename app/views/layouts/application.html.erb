@@ -24,7 +24,7 @@
   <body class="app-body">
 
 
-    
+    <% unless params[:controller] == "devise/sessions" && params[:action] == "new" %>
           <nav class="navbar navbar-expand-sm navbar-transparent" style="background-color: teal;">
           <ul class="navbar-nav mr-auto navbar-transparent">
             <img src="https://i.imgur.com/EETal7I.png" class="navbarlogo" float-left>
@@ -44,6 +44,7 @@
       <div class="alert alert-success" role="alert">
         <%= notice %>
       </div>
+    <% end %>
     <% end %>
     <%= yield %>
    </body>
