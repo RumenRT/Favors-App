@@ -4,7 +4,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@rails/webpacker": "3.5",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "babel-preset-react": "^6.24.1",
     "mapbox-gl": "^0.50.0-beta.1",
     "prop-types": "^15.6.2",
